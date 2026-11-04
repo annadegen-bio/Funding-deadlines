@@ -4,7 +4,7 @@
 # subscriber's calendar stores it — changing it later breaks existing subscriptions.
 # If the repo moves to an organisation account or gets a custom domain
 # (e.g. funding.utrechtholdings.nl), update this BEFORE announcing the feeds.
-base_url: "https://annadegen-bio.github.io/funding-deadlines/"
+base_url: "https://annadegen-bio.github.io/Funding-deadlines/"
 
 # Optional: URL of the Cloudflare Worker in worker/ (custom filters and custom reminders
 # in a subscription). Leave empty until it is deployed; the website then offers the

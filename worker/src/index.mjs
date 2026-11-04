@@ -14,7 +14,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname !== '/feed.ics') return new Response('Not found', { status: 404 });
 
-    const base = env.DATA_URL || 'https://annadegen-bio.github.io/funding-deadlines/data/opportunities.json';
+    const base = env.DATA_URL || 'https://annadegen-bio.github.io/Funding-deadlines/data/opportunities.json';
     const res = await fetch(base, { cf: { cacheTtl: 900, cacheEverything: true } });
     if (!res.ok) return new Response('Data unavailable', { status: 502 });
     const data = await res.json();

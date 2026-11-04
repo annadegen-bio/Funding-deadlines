@@ -4,4 +4,4 @@ compatibility_date = "2026-10-01"
 
 [vars]
 # Where GitHub Pages publishes the data. Change together with data/config.yaml → base_url.
-DATA_URL = "https://annadegen-bio.github.io/funding-deadlines/data/opportunities.json"
+DATA_URL = "https://annadegen-bio.github.io/Funding-deadlines/data/opportunities.json"
