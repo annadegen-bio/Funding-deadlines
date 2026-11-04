@@ -1,0 +1,7 @@
+name = "uh-funding-feeds"
+main = "src/index.mjs"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Where GitHub Pages publishes the data. Change together with data/config.yaml → base_url.
+DATA_URL = "https://annadegen-bio.github.io/funding-deadlines/data/opportunities.json"

@@ -1,0 +1,15 @@
+{
+  "name": "funding-deadlines",
+  "private": true,
+  "type": "module",
+  "description": "Utrecht Funding & Deadlines: curated funding opportunities with subscribable, filterable calendar feeds",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/test/*.test.mjs",
+    "serve": "npm run build && npx --yes http-server dist -p 8080 -c-1"
+  },
+  "dependencies": {
+    "yaml": "2.9.1"
+  }
+}

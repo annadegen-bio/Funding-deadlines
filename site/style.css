@@ -1,0 +1,86 @@
+/* Scoped under .uhf so it can live inside a WordPress page without touching the theme. */
+.uhf {
+  --uhf-ink: #1d1d1b;
+  --uhf-muted: #5c5c58;
+  --uhf-line: #dedcd6;
+  --uhf-bg: #ffffff;
+  --uhf-soft: #f6f5f1;
+  --uhf-accent: #b8002e;      /* adjust to the Utrecht Holdings brand colour */
+  --uhf-accent-ink: #ffffff;
+  --uhf-ok: #1f6f43;
+  --uhf-warn: #8a5a00;
+  --uhf-no: #8c8c86;
+  color: var(--uhf-ink);
+  background: var(--uhf-bg);
+  font: inherit;
+  line-height: 1.5;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.uhf *, .uhf *::before, .uhf *::after { box-sizing: border-box; }
+.uhf h3 { font-size: 1.15rem; margin: 0 0 .6rem; }
+.uhf h4 { font-size: 1.05rem; margin: 0; }
+.uhf a { color: var(--uhf-accent); }
+.uhf small, .uhf .uhf-note, .uhf .uhf-meta, .uhf .uhf-funder { color: var(--uhf-muted); font-size: .88rem; }
+.uhf .uhf-intro { margin-bottom: 1rem; }
+.uhf .uhf-panel { border: 1px solid var(--uhf-line); border-radius: 10px; padding: 1rem 1.1rem; margin-bottom: 1rem; background: var(--uhf-bg); }
+.uhf fieldset { border: 0; padding: 0; margin: 0 0 .8rem; }
+.uhf legend { font-weight: 600; font-size: .9rem; margin-bottom: .35rem; }
+.uhf .uhf-optional { font-weight: 400; font-size: .8rem; color: var(--uhf-muted); border: 1px solid var(--uhf-line); border-radius: 99px; padding: 0 .5rem; margin-left: .3rem; }
+
+.uhf .uhf-chips { display: flex; flex-wrap: wrap; gap: .4rem; }
+.uhf .uhf-chip { position: relative; cursor: pointer; }
+.uhf .uhf-chip input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.uhf .uhf-chip span { display: inline-block; border: 1px solid var(--uhf-line); border-radius: 99px; padding: .25rem .75rem; font-size: .9rem; background: var(--uhf-soft); }
+.uhf .uhf-chip input:checked + span { background: var(--uhf-accent); border-color: var(--uhf-accent); color: var(--uhf-accent-ink); }
+.uhf .uhf-chip input:focus-visible + span { outline: 2px solid var(--uhf-accent); outline-offset: 2px; }
+.uhf details.uhf-more summary { cursor: pointer; font-weight: 600; font-size: .9rem; margin-bottom: .6rem; }
+.uhf .uhf-search { display: flex; gap: .5rem; align-items: center; font-weight: 600; font-size: .9rem; }
+.uhf .uhf-search input { flex: 1; min-width: 0; }
+
+.uhf input[type=search], .uhf input[type=number], .uhf input:not([type]), .uhf select {
+  font: inherit; font-size: .95rem; padding: .35rem .5rem; border: 1px solid var(--uhf-line); border-radius: 6px; background: #fff; color: var(--uhf-ink); max-width: 100%;
+}
+.uhf .uhf-form { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: .7rem 1rem; }
+.uhf .uhf-form label { display: flex; flex-direction: column; gap: .2rem; font-size: .9rem; font-weight: 600; }
+.uhf .uhf-form small { font-weight: 400; }
+.uhf .uhf-holds label { flex-direction: row; font-weight: 400; gap: .4rem; }
+.uhf .uhf-row { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.2rem; margin-top: .8rem; }
+.uhf .uhf-toggle { display: flex; gap: .4rem; align-items: baseline; font-size: .92rem; }
+
+.uhf .uhf-buttons { display: flex; flex-wrap: wrap; gap: .5rem; margin: .6rem 0; }
+.uhf .uhf-btn { display: inline-block; font: inherit; font-size: .9rem; padding: .45rem .9rem; border-radius: 6px; border: 1px solid var(--uhf-accent); background: var(--uhf-accent); color: var(--uhf-accent-ink); text-decoration: none; cursor: pointer; }
+.uhf .uhf-btn-ghost { background: transparent; color: var(--uhf-accent); }
+.uhf .uhf-btn[disabled] { opacity: .45; cursor: default; }
+.uhf .uhf-link { font: inherit; font-size: .88rem; background: none; border: 0; padding: 0; color: var(--uhf-accent); text-decoration: underline; cursor: pointer; }
+
+.uhf .uhf-group { margin-top: 1.6rem; }
+.uhf .uhf-count { font-size: .8rem; font-weight: 600; background: var(--uhf-soft); border: 1px solid var(--uhf-line); border-radius: 99px; padding: 0 .5rem; vertical-align: middle; }
+.uhf .uhf-card { border: 1px solid var(--uhf-line); border-radius: 10px; padding: .9rem 1rem; margin: .7rem 0; background: var(--uhf-bg); }
+.uhf .uhf-card p { margin: .4rem 0; }
+.uhf .uhf-card h4 a { color: var(--uhf-ink); text-decoration: none; }
+.uhf .uhf-card h4 a:hover { text-decoration: underline; }
+.uhf .uhf-dls { list-style: none; padding: 0; margin: .5rem 0; }
+.uhf .uhf-dl { display: flex; flex-wrap: wrap; gap: .2rem .7rem; align-items: baseline; padding: .3rem .55rem; border-left: 3px solid var(--uhf-accent); background: var(--uhf-soft); margin-bottom: .3rem; border-radius: 0 6px 6px 0; }
+.uhf .uhf-dl em { font-style: normal; color: var(--uhf-muted); font-size: .88rem; }
+.uhf .uhf-dl.uhf-soon em { color: var(--uhf-accent); font-weight: 700; }
+.uhf .uhf-dl.uhf-invite { border-left-color: var(--uhf-no); opacity: .85; }
+.uhf .uhf-ics { font-size: .88rem; font-weight: 600; }
+.uhf .uhf-roll, .uhf .uhf-next { font-size: .92rem; background: var(--uhf-soft); padding: .3rem .55rem; border-radius: 6px; }
+.uhf .uhf-elig { font-size: .92rem; }
+.uhf .uhf-tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .4rem; }
+.uhf .uhf-tag { font-size: .78rem; border: 1px solid var(--uhf-line); border-radius: 4px; padding: 0 .4rem; color: var(--uhf-muted); }
+.uhf .uhf-tag-stage { border-color: var(--uhf-ink); color: var(--uhf-ink); }
+.uhf .uhf-tag-flag { background: var(--uhf-soft); }
+.uhf .uhf-fit { display: inline-block; font-size: .82rem; font-weight: 600; border-radius: 4px; padding: .05rem .45rem; margin-top: .35rem; }
+.uhf .uhf-fit-match { color: var(--uhf-ok); border: 1px solid var(--uhf-ok); }
+.uhf .uhf-fit-check { color: var(--uhf-warn); border: 1px solid var(--uhf-warn); }
+.uhf .uhf-fit-unlikely { color: var(--uhf-no); border: 1px solid var(--uhf-no); }
+.uhf .uhf-empty, .uhf .uhf-error, .uhf .uhf-loading { padding: 1rem; background: var(--uhf-soft); border-radius: 8px; }
+.uhf .uhf-foot { margin-top: 2rem; font-size: .88rem; color: var(--uhf-muted); }
+
+@media (max-width: 560px) {
+  .uhf .uhf-panel { padding: .8rem; }
+  .uhf .uhf-search { flex-direction: column; align-items: stretch; }
+  .uhf .uhf-buttons .uhf-btn { flex: 1 1 45%; text-align: center; }
+}

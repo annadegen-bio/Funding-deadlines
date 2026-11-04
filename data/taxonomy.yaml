@@ -1,0 +1,79 @@
+# Controlled vocabularies. Every value used in opportunities.yaml must be listed here;
+# `npm run validate` fails on anything else. Add a value here first, then use it.
+
+# Broad areas — the Utrecht Holdings focus areas. These drive the subscription feeds.
+# `any` is not an area you pick for a feed: an opportunity marked `any` (open to all
+# disciplines) appears in every area feed.
+areas:
+  life-sciences:   { label: "Life sciences" }
+  chemistry:       { label: "Chemistry" }
+  biology:         { label: "Biology" }
+  animal-health:   { label: "Animal health & pharmacy" }
+  medtech:         { label: "MedTech" }
+  ai-software:     { label: "AI & software" }
+  sustainability:  { label: "Sustainability" }
+  any:             { label: "All disciplines", feed: false }
+
+# Stages of the route from research to venture. Ordered.
+stages:
+  research:     { label: "Research grant",            hint: "Curiosity-driven or applied research, often with an impact angle" }
+  valorisation: { label: "Proof of concept",          hint: "Testing whether a result can become a product, service or licence" }
+  transition:   { label: "Transition & pre-seed",     hint: "Forming or financing a start-up: loans, pre-seed funds, transition grants" }
+  venture:      { label: "Venture & pitch",           hint: "Pitch competitions, accelerators, prizes and early investment for start-ups" }
+
+# Specific flags — finer filters on the website. Not used for feeds.
+flags:
+  oncology:            { label: "Oncology" }
+  atmp:                { label: "ATMP / cell & gene therapy" }
+  rare-diseases:       { label: "Rare diseases" }
+  infectious-diseases: { label: "Infectious diseases & AMR" }
+  neuro:               { label: "Neuroscience & brain disorders" }
+  cardiovascular:      { label: "Cardiovascular" }
+  biomarkers:          { label: "Biomarkers & diagnostics" }
+  drug-development:    { label: "Drug development & repurposing" }
+  clinical-trials:     { label: "Clinical trials" }
+  nam:                 { label: "Animal-free methods (NAMs)" }
+  one-health:          { label: "One Health & veterinary" }
+  digital-health:      { label: "Digital health" }
+  care-technology:     { label: "Care & labour-saving technology" }
+  food-agri:           { label: "Food & agriculture" }
+  energy-climate:      { label: "Energy & climate" }
+  circular:            { label: "Circular economy & materials" }
+  quantum-photonics:   { label: "Quantum & photonics" }
+  deep-tech:           { label: "Deep tech (general)" }
+  social-impact:       { label: "Social impact" }
+  women:               { label: "Women-led / women innovators" }
+  young-innovators:    { label: "Young innovators (age limit)" }
+  early-career:        { label: "Early-career researchers" }
+  international:       { label: "International collaboration" }
+  public-private:      { label: "Public-private partnership (company partner needed)" }
+
+# Kind of money. Important for start-ups: dilutive vs non-dilutive.
+funding_types:
+  grant:       { label: "Grant", dilutive: false }
+  fellowship:  { label: "Personal grant / fellowship", dilutive: false }
+  loan:        { label: "Loan / innovation credit", dilutive: false }
+  prize:       { label: "Prize / award", dilutive: false }
+  programme:   { label: "Programme / accelerator (in-kind, sometimes cash)", dilutive: false }
+  equity:      { label: "Investment (equity or convertible)", dilutive: true }
+  tax:         { label: "Tax scheme", dilutive: false }
+
+# Who may apply. Used by the eligibility check on the website.
+applicants:
+  researcher:     { label: "Researcher at a knowledge institution" }
+  phd:            { label: "PhD candidate" }
+  student:        { label: "Student" }
+  consortium:     { label: "Consortium (several partners)" }
+  founder:        { label: "Founder / team without a company yet" }
+  startup:        { label: "Start-up (registered company)" }
+  sme:            { label: "SME" }
+
+# Prerequisites an applicant must already hold.
+requires:
+  erc-grant:        { label: "A current or recent ERC grant" }
+  nwo-zonmw-grant:  { label: "Earlier NWO or ZonMw research funding" }
+  research-result:  { label: "A research result from a Dutch knowledge institution" }
+  company-partner:  { label: "A company partner in the consortium" }
+  nl-company:       { label: "A company registered in the Netherlands" }
+  eu-company:       { label: "A company registered in the EU or an associated country" }
+  invitation:       { label: "An invitation after a pre-proposal round" }

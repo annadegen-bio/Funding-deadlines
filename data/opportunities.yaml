@@ -1,0 +1,1220 @@
+# Utrecht Funding & Deadlines — the single source of truth.
+# Rules: rules/funding-rules.md. Vocabularies: data/taxonomy.yaml. Check: npm run validate.
+#
+# Field guide (short):
+#   id            stable, lowercase-hyphenated; never reuse an id for a different scheme
+#   url           the funder's own page for this call — never an aggregator
+#   areas         broad UH areas, or [any] for all disciplines
+#   stages        research | valorisation | transition | venture
+#   flags         specific topics (oncology, atmp, ...) — as many as apply
+#   eligibility   applicants, requires, years_post_phd {min,max}, max_age,
+#                 max_company_age_years, gender: women, and `utrecht` (required, free text)
+#   deadlines     date (YYYY-MM-DD), time (HH:MM), tz, label, invite_only
+#   rolling       true when you can apply at any time (with rolling_note)
+#   next_round    when no date is confirmed yet: what is expected, and from what evidence
+#   source_quote  the deadline sentence copied from the funder's page
+#   last_verified the date someone last checked the funder's page
+
+opportunities:
+
+# ============================================================ Utrecht
+
+- id: uh-make-it-matter-voucher
+  title: Make It Matter Voucher
+  funder: Utrecht Holdings
+  url: https://utrechtholdings.nl/how-we-work/make-it-matter-voucher-program/
+  summary: >-
+    €25,000 for a 12-month proof-of-concept project on patentable technology: feasibility
+    studies, validation data, strengthening the IP position, preparing commercialisation.
+    Repaid only if the project later generates licence income.
+  amount: "€25,000 (success-based repayment)"
+  areas: [any]
+  stages: [valorisation]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Utrecht University and UMC Utrecht employees only. The project must rest on novel, patentable IP and start within 6 months of approval.
+  deadlines: []
+  next_round: "Two rounds a year; the last deadline was 22 September 2026 (pitches 13 October 2026). Next round expected in spring 2027 — register via the form on the page to receive the application form."
+  last_verified: 2026-11-04
+
+- id: uh-seed-fund
+  title: Utrecht Holdings Seed Fund
+  funder: Utrecht Holdings Seed Fund
+  url: https://uhsf.nl/
+  summary: >-
+    Pre-seed and seed investment in science-based start-ups in life sciences & medtech,
+    digital innovation and sustainability, linked to Utrecht University and UMC Utrecht.
+  amount: "Minimum ticket €100,000; on average €300,000 in a first round, tranched to milestones"
+  areas: [life-sciences, medtech, ai-software, sustainability, chemistry, biology, animal-health]
+  stages: [transition, venture]
+  flags: [deep-tech]
+  funding_type: equity
+  eligibility:
+    applicants: [startup, founder]
+    requires: []
+    utrecht: Spin-offs with innovations coming from, or linked to, UU and UMC Utrecht. Talk to your Utrecht Holdings business developer first.
+  deadlines: []
+  rolling: true
+  rolling_note: Investment fund — contact the team at any time.
+  last_verified: 2026-11-04
+
+- id: utrechtinc-programmes
+  title: UtrechtInc start-up programmes (Ready to Start, Validation, Foundership)
+  funder: UtrechtInc
+  url: https://utrechtinc.nl/programs/
+  summary: >-
+    Utrecht's university incubator. Ready to Start is a free online ideation course for
+    researchers; Validation programmes test market fit; the Foundership supports
+    post-validation start-ups towards investment.
+  areas: [any]
+  stages: [valorisation, transition, venture]
+  flags: []
+  funding_type: programme
+  eligibility:
+    applicants: [researcher, phd, student, founder, startup]
+    requires: []
+    utrecht: Open to researchers, students and founders; programmes are mostly in person in Utrecht.
+  deadlines: []
+  rolling: true
+  rolling_note: Several intakes a year; dates for the next cohort are announced on the programme pages.
+  last_verified: 2026-11-04
+
+- id: rom-utrecht-region
+  title: ROM Utrecht Region — start-up financing and regional VFF desk
+  funder: ROM Utrecht Region
+  url: https://romutrechtregion.nl/doe-de-financieringcheck/
+  summary: >-
+    The regional development agency invests in innovative start-ups and scale-ups in the
+    Utrecht region and is the regional desk for national schemes such as the early-phase
+    loan (VFF). Start with their financing check.
+  areas: [any]
+  stages: [transition, venture]
+  flags: []
+  funding_type: equity
+  eligibility:
+    applicants: [startup, sme, founder]
+    requires: []
+    utrecht: Companies based (or settling) in the province of Utrecht.
+  deadlines: []
+  rolling: true
+  rolling_note: Investment requests are handled continuously.
+  last_verified: 2026-11-04
+
+# ============================================================ NWO / ZonMw
+
+- id: nwo-take-off-phase-1
+  title: NWO Take-off phase 1 — Feasibility studies (WO) 2026
+  funder: NWO
+  url: https://www.nwo.nl/en/calls/take-off-phase-1-feasibility-studies-wo-2026
+  summary: >-
+    Funds a feasibility study into the commercial potential of a research result, as the
+    first step towards a start-up. One call for all of 2026; applications are handled
+    continuously until the closing date or until the maximum number is reached.
+  areas: [any]
+  stages: [valorisation]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: [research-result]
+    utrecht: Researchers at UU, UMC Utrecht and other Dutch knowledge institutions. Utrecht Holdings can help with the commercial section.
+  deadlines:
+    - { date: 2026-12-10, time: "14:00", tz: Europe/Amsterdam, label: final closing date }
+  rolling: true
+  rolling_note: Submit any time before the closing date; NWO may close earlier once the maximum number of applications is reached.
+  source_quote: "Applications can be submitted continuously via ISAAC until December 10, 2026, at 14:00:00 CET at the latest."
+  last_verified: 2026-11-04
+
+- id: nwo-take-off-phase-2
+  title: NWO Take-off phase 2 — Early-phase trajectories (loan)
+  funder: NWO
+  url: https://www.nwo.nl/en/researchprogrammes/take-off
+  summary: >-
+    Loan for start-ups recently founded by researchers or entrepreneurs to make a
+    knowledge innovation commercially viable (production process, market research,
+    financing plan). Maximum term two years; repay within eight years.
+  amount: "€50,000 – €450,000 loan"
+  areas: [any]
+  stages: [transition]
+  flags: []
+  funding_type: loan
+  eligibility:
+    applicants: [startup]
+    requires: [nl-company, research-result]
+    utrecht: Young start-ups based on research from a Dutch knowledge institution, such as UU or UMC Utrecht spin-offs.
+  deadlines: []
+  next_round: "Usually two rounds a year: spring (opens January, closes February) and autumn (opens July/August, closes September). Spring 2027 round expected to close in February 2027."
+  last_verified: 2026-11-04
+
+- id: nwo-venture-challenge-spring-2027
+  title: NWO Venture Challenge — spring 2027
+  funder: NWO
+  url: https://www.nwo.nl/en/calls/venture-challenge-spring-2027
+  summary: >-
+    Training programme for teams who want to bring a life sciences & health product or
+    service to market as a new start-up: two bootcamps and a jury pitch (23 June 2027).
+  areas: [life-sciences, medtech, biology, animal-health]
+  stages: [valorisation, venture]
+  flags: []
+  funding_type: programme
+  eligibility:
+    applicants: [researcher, phd, founder]
+    requires: [research-result]
+    utrecht: Teams of three or four people, based on research from a Dutch knowledge institution.
+  deadlines:
+    - { date: 2026-12-10, time: "14:00", tz: Europe/Amsterdam, label: registration }
+  source_quote: "Registration for the spring edition opens 20 October 2026 and closes on 10 December 2026 14:00:00 CET."
+  last_verified: 2026-11-04
+
+- id: nwo-impact-explorer-2026
+  title: NWO / ZonMw Impact Explorer 2026
+  funder: NWO
+  url: https://www.nwo.nl/en/calls/impact-explorer-2026
+  summary: >-
+    Small grant to explore whether an unexpected outcome from curiosity-driven research
+    could lead to societal or economic impact. First come, first served until the budget
+    runs out.
+  amount: "€20,000 – €35,000"
+  areas: [any]
+  stages: [valorisation]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: [nwo-zonmw-grant]
+    utrecht: Researchers with a running project in an NWO or ZonMw Open Competition or Talent Programme (Veni, Vidi, Vici).
+  deadlines:
+    - { date: 2027-10-05, time: "14:00", tz: Europe/Amsterdam, label: final closing date }
+  rolling: true
+  rolling_note: Collected for review at eight moments; granted until the €1.45 million budget is used.
+  source_quote: "continuous basis from Tuesday 6 October 2026 up to and including Tuesday 5 October 2027 before 14:00:00 CEST"
+  last_verified: 2026-11-04
+
+- id: nwo-talent-programme
+  title: NWO Talent Programme — Veni, Vidi, Vici
+  funder: NWO / ZonMw
+  url: https://www.nwo.nl/en/calls/nwo-talent-programme
+  summary: >-
+    Personal grants for researchers at three career stages to develop their own line of
+    research. Runs in all domains, with health research through ZonMw.
+  areas: [any]
+  stages: [research]
+  flags: [early-career]
+  funding_type: fellowship
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Researchers hosted by a Dutch knowledge institution, including UU, UMC Utrecht and Hubrecht. Career-stage windows apply per instrument; UU and UMCU run internal support and review — contact your Research Support Office early.
+  deadlines: []
+  next_round: "2026 rounds are closed to new applicants (e.g. Veni ZonMw pre-proposals closed 1 September 2026; Vici full proposals 8 September 2026). 2027 calls expected on the NWO page."
+  last_verified: 2026-11-04
+
+- id: nwo-open-technology-programme
+  title: NWO Open Technology Programme
+  funder: NWO
+  url: https://www.nwo.nl/en/calls/open-technology-programme-2026
+  summary: >-
+    Application-oriented technical-scientific research with users from industry or
+    society who co-fund the project. Open to all technical disciplines.
+  areas: [any]
+  stages: [research]
+  flags: [public-private]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: [company-partner]
+    utrecht: Researchers at Dutch knowledge institutions, with user co-funding.
+  deadlines: []
+  next_round: "The 2026 call is closed. A 2027 call is expected — check the NWO page."
+  last_verified: 2026-11-04
+
+- id: zonmw-rubicon-2026-3
+  title: Rubicon 2026-3
+  funder: NWO / ZonMw
+  url: https://www.zonmw.nl/en/subsidy/rubicon-2026-3
+  summary: >-
+    Lets researchers who recently obtained their PhD gain experience at a top research
+    institution abroad.
+  areas: [any]
+  stages: [research]
+  flags: [early-career, international]
+  funding_type: fellowship
+  eligibility:
+    applicants: [phd, researcher]
+    requires: []
+    utrecht: Recent PhDs from Dutch institutions such as UU and UMC Utrecht who will move abroad; check the call for the exact PhD-date window.
+  deadlines:
+    - { date: 2026-12-01, time: "14:00", tz: Europe/Amsterdam }
+  source_quote: "You can submit your grant application through the MijnZonMw digital counter until Tuesday the 1st of December 2026 at 14:00:00 hours"
+  last_verified: 2026-11-04
+
+- id: zonmw-nam-collaboration-grant-2026
+  title: ZonMw NAM Collaboration Grant 2026
+  funder: ZonMw
+  url: https://www.zonmw.nl/en/subsidy/nam-collaboration-grant-2026
+  summary: >-
+    Funding for collaborations that advance new approach methodologies (animal-free
+    research and testing methods). Assessed in order of submission; the call may close
+    early if the budget runs out.
+  areas: [life-sciences, biology, animal-health, chemistry]
+  stages: [research, valorisation]
+  flags: [nam]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: []
+    utrecht: See the call for eligible main applicants; Utrecht has a strong NAM community (UU, UMC Utrecht, Hubrecht organoids).
+  deadlines:
+    - { date: 2027-03-30, time: "14:00", tz: Europe/Amsterdam, label: final closing date }
+  rolling: true
+  rolling_note: Continuous call, first come first served.
+  source_quote: "Deadline: 30 March 2027, 2.00 PM … Applications are assessed in order of submission."
+  last_verified: 2026-11-04
+
+# ============================================================ Dutch health foundations
+
+- id: kwf-2027-project-calls
+  title: KWF 2027 project calls — full-proposal stage
+  funder: KWF Dutch Cancer Society
+  url: https://www.kwf.nl/en/forresearchers/funding
+  summary: >-
+    KWF's 2027 Development, Young Investigator Grant, Exploration, Biomarker (validation
+    and implementation) and PIPELINE calls. Pre-proposals have closed; the deadlines below
+    are for invited full proposals only. The Exploration call is KWF's last project-based
+    call for basic research before moving to research-group funding from 2028.
+  areas: [life-sciences, medtech, biology]
+  stages: [research, valorisation]
+  flags: [oncology, biomarkers, clinical-trials, early-career, drug-development]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: [invitation]
+    utrecht: Researchers at Dutch institutions including UMC Utrecht, Princess Máxima Center and Hubrecht — only those invited after the pre-proposal round.
+  deadlines:
+    - { date: 2026-12-08, time: "12:00", tz: Europe/Amsterdam, label: PIPELINE-2027 full proposal, invite_only: true }
+    - { date: 2027-02-23, time: "12:00", tz: Europe/Amsterdam, label: Biomarkers 2027 full proposal, invite_only: true }
+    - { date: 2027-03-16, time: "12:00", tz: Europe/Amsterdam, label: Development 2027 full proposal, invite_only: true }
+    - { date: 2027-04-01, time: "12:00", tz: Europe/Amsterdam, label: YIG 2027 full proposal, invite_only: true }
+    - { date: 2027-04-13, time: "12:00", tz: Europe/Amsterdam, label: Exploration 2027-1 full proposal, invite_only: true }
+  next_round: "Pre-proposal rounds for the 2028 calls are expected from mid-2027."
+  source_quote: "Closure full proposals: 8 December 2026 (12.00 noon) [PIPELINE]; 16 March 2027 (12:00 noon) [Development]; 1 April 2027 (12:00 noon) [YIG]; 13 April 2027 (12:00 noon) [Exploration]; 23 February 2027 (12 noon) [Biomarkers]"
+  last_verified: 2026-11-04
+
+- id: kwf-proof-of-concept
+  title: KWF Proof of Concept Programme
+  funder: KWF Dutch Cancer Society
+  url: https://www.kwf.nl/en/forresearchers/funding/proofofconcept
+  summary: >-
+    Bridges the gap between cancer research results and impact: proof-of-concept work
+    that brings a result closer to application in patients.
+  areas: [life-sciences, medtech]
+  stages: [valorisation]
+  flags: [oncology]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Cancer researchers at Dutch knowledge institutions, including UMC Utrecht and Princess Máxima Center.
+  deadlines: []
+  next_round: "Three rounds in 2026 (closing 10 February, 2 June and 22 September 2026, 12:00). 2027 rounds expected on a similar schedule — first likely around February 2027."
+  last_verified: 2026-11-04
+
+- id: hanarth-fonds
+  title: Hanarth Fonds — AI in oncology
+  funder: Stichting Hanarth Fonds
+  url: https://www.hanarthfonds.nl/nl/aanvraag
+  summary: >-
+    Research projects and fellowships using artificial intelligence and machine learning
+    to improve diagnosis and treatment of cancer, with a focus on rare cancers.
+  areas: [ai-software, life-sciences, medtech]
+  stages: [research]
+  flags: [oncology, rare-diseases, digital-health]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Medical or non-medical scientists with a PhD and an appointment at a Dutch knowledge institution (universities, UMCs) — UU and UMC Utrecht qualify.
+  deadlines: []
+  next_round: "Annual round. In 2026 pre-proposals closed 12 March 14:00 and full proposals 11 June. The 2027 round is expected to open early 2027."
+  last_verified: 2026-11-04
+
+- id: hartstichting-open-calls
+  title: Dutch Heart Foundation — open calls and innovation desk
+  funder: Hartstichting
+  url: https://professionals.hartstichting.nl/openstaande-calls-en-events
+  summary: >-
+    Calls for cardiovascular research, including (co-)funding for thematic consortia, and
+    an innovation desk for ideas that do not fit a running call.
+  areas: [life-sciences, medtech]
+  stages: [research, valorisation]
+  flags: [cardiovascular, public-private]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: []
+    utrecht: Cardiovascular researchers at Dutch institutions, including UMC Utrecht.
+  deadlines: []
+  rolling: true
+  rolling_note: Check the open-calls page; the innovation desk takes ideas continuously.
+  last_verified: 2026-11-04
+
+- id: hh-mkb-call-2027
+  title: Health~Holland MKB Call 2027 (incl. labour-saving technology track)
+  funder: Health~Holland (TKI Life Sciences & Health)
+  url: https://www.health-holland.com/calls/mkb-call-2027
+  summary: >-
+    PPP funding for consortia of at least one Dutch for-profit SME and one Dutch research
+    organisation, to strengthen SME development capacity in life sciences & health.
+    Includes a thematic track for labour-saving care technology.
+  amount: "€8 million in total; Dutch research organisations up to €150,000 per project"
+  areas: [life-sciences, medtech, ai-software, biology, chemistry]
+  stages: [research, valorisation]
+  flags: [public-private, care-technology]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium, sme, startup]
+    requires: [company-partner, nl-company]
+    utrecht: The main applicant must be a Dutch company; UU, UMC Utrecht and HU groups join as research partners.
+  deadlines:
+    - { date: 2026-11-20, time: "17:00", tz: Europe/Amsterdam, label: full proposal }
+  source_quote: "Volledige aanvraag deadline 20 november 2026; 17:00 CET"
+  last_verified: 2026-11-04
+
+- id: mjff-therapeutics-pipeline
+  title: Michael J. Fox Foundation — Parkinson's Disease Therapeutics Pipeline Program
+  funder: The Michael J. Fox Foundation
+  url: https://www.michaeljfox.org/grant/parkinsons-disease-therapeutics-pipeline-program
+  summary: >-
+    Funding for preclinical and clinical development of Parkinson's therapies, open to
+    academia and industry worldwide. Pre-proposals at any time; full proposals by
+    invitation in one of five review cycles.
+  areas: [life-sciences, biology]
+  stages: [research, valorisation, venture]
+  flags: [neuro, drug-development, clinical-trials]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, startup, sme]
+    requires: []
+    utrecht: Open internationally, to academic groups and companies.
+  deadlines: []
+  rolling: true
+  rolling_note: Pre-proposals accepted on a rolling basis and reviewed within three weeks.
+  last_verified: 2026-11-04
+
+# ============================================================ RVO (Netherlands Enterprise Agency)
+
+- id: rvo-vroegefasefinanciering
+  title: Early-phase financing (Vroegefasefinanciering, VFF)
+  funder: RVO / ROM Utrecht Region
+  url: https://www.rvo.nl/subsidies-financiering/vroegefasefinanciering
+  summary: >-
+    Loan to research the technical and commercial feasibility of an innovative idea,
+    before investors come in. Has a separate target group for academic starters whose
+    activities come directly from university, UMC or HBO research.
+  areas: [any]
+  stages: [transition]
+  flags: []
+  funding_type: loan
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    max_company_age_years: 5
+    utrecht: Companies in the province of Utrecht apply via the regional desk (ROM Utrecht Region), not RVO. Academic starters from UU, UMC Utrecht and HU qualify for the academic target group.
+  deadlines:
+    - { date: 2026-12-31, label: 2026 window closes }
+  rolling: true
+  rolling_note: First come, first served while the budget lasts; a 2027 window is expected from 1 January 2027.
+  source_quote: "Open voor aanvragen … donderdag 1 januari 2026 – donderdag 31 december 2026"
+  last_verified: 2026-11-04
+
+- id: rvo-innovatiekrediet
+  title: Innovation credit (Innovatiekrediet)
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/innovatiekrediet
+  summary: >-
+    Loan for the development costs of a technically new product, process or service,
+    or a clinical development project, with a good chance of commercial success.
+  areas: [any]
+  stages: [transition, venture]
+  flags: [clinical-trials]
+  funding_type: loan
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Dutch companies, including Utrecht spin-offs.
+  deadlines:
+    - { date: 2026-12-31, label: 2026 window closes }
+  rolling: true
+  rolling_note: Continuous during the year while the budget lasts; a 2027 window is expected.
+  source_quote: "donderdag 1 januari 2026 – donderdag 31 december 2026"
+  last_verified: 2026-11-04
+
+- id: rvo-eurostars-call-12
+  title: Eurostars — 12th call
+  funder: Eureka / RVO
+  url: https://www.rvo.nl/subsidies-financiering/eurostars
+  summary: >-
+    Grants for international, market-oriented R&D projects led by innovative SMEs, with
+    partners in at least two Eureka countries. Knowledge institutions can join.
+  areas: [any]
+  stages: [valorisation, venture]
+  flags: [international, public-private]
+  funding_type: grant
+  eligibility:
+    applicants: [sme, startup, consortium]
+    requires: [company-partner]
+    utrecht: An R&D-performing SME must lead; UU, UMC Utrecht and HU can join as partners. Dutch partners apply for national funding via RVO.
+  deadlines:
+    - { date: 2027-03-04, time: "14:00", tz: Europe/Amsterdam }
+  source_quote: "De 12e call van het Eurostars-3 programma opent op 17 december 2026 en sluit op 4 maart 2027, 14:00 uur."
+  last_verified: 2026-11-04
+
+- id: rvo-dei-plus
+  title: DEI+ — Demonstration Energy and Climate Innovation
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/dei
+  summary: >-
+    Subsidy for pilot and demonstration projects of innovative energy and climate
+    technology in the Netherlands.
+  areas: [sustainability, chemistry]
+  stages: [valorisation, venture]
+  flags: [energy-climate, circular]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme, consortium]
+    requires: [nl-company]
+    utrecht: Companies carry out the demonstration; knowledge institutions can be partners.
+  deadlines:
+    - { date: 2026-12-17, label: 2026 window closes }
+  source_quote: "Aanvragen vanaf 16 juni 2026 tot en met 17 december 2026."
+  last_verified: 2026-11-04
+
+- id: rvo-wbso
+  title: WBSO — R&D tax credit
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/wbso
+  summary: >-
+    Lowers wage costs for R&D work done by your own staff (and other R&D costs). Apply
+    before the period in which the R&D takes place.
+  areas: [any]
+  stages: [transition, venture]
+  flags: []
+  funding_type: tax
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Dutch companies doing R&D, including start-ups with staff on payroll.
+  deadlines: []
+  rolling: true
+  rolling_note: Apply before each R&D period starts; periods run from 3 to 12 months.
+  last_verified: 2026-11-04
+
+# ============================================================ European Research Council
+
+- id: erc-consolidator-2027
+  title: ERC Consolidator Grant 2027
+  funder: European Research Council
+  url: https://erc.europa.eu/apply-grant/consolidator-grant
+  summary: >-
+    Frontier research grant for researchers consolidating their independent team or
+    programme.
+  amount: "Up to €2 million for 5 years"
+  areas: [any]
+  stages: [research]
+  flags: []
+  funding_type: fellowship
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    years_post_phd: { min: 7, max: 12 }
+    utrecht: Any nationality, hosted in an EU or associated country — UU, UMC Utrecht and Hubrecht can host. Both universities run internal reviews before the deadline; contact your RSO.
+  deadlines:
+    - { date: 2027-01-12, time: "17:00", tz: Europe/Brussels }
+  source_quote: "Consolidator Grant 2027 Opening: 24 September 2026 Deadline: 12 January 2027"
+  last_verified: 2026-11-04
+
+- id: erc-advanced-2027
+  title: ERC Advanced Grant 2027
+  funder: European Research Council
+  url: https://erc.europa.eu/apply-grant/advanced-grant
+  summary: Frontier research grant for established research leaders with a significant track record.
+  amount: "Up to €2.5 million for 5 years"
+  areas: [any]
+  stages: [research]
+  flags: []
+  funding_type: fellowship
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Established PIs hosted in an EU or associated country, including UU and UMC Utrecht.
+  deadlines:
+    - { date: 2027-08-26, time: "17:00", tz: Europe/Brussels }
+  source_quote: "Advanced Grant 2027 Opening: 27 May 2027 Deadline: 26 August 2027"
+  last_verified: 2026-11-04
+
+- id: erc-starting
+  title: ERC Starting Grant
+  funder: European Research Council
+  url: https://erc.europa.eu/apply-grant/starting-grant
+  summary: Frontier research grant for talented early-career scientists starting their own independent team.
+  amount: "Up to €1.5 million for 5 years"
+  areas: [any]
+  stages: [research]
+  flags: [early-career]
+  funding_type: fellowship
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    years_post_phd: { min: 2, max: 7 }
+    utrecht: Hosted in an EU or associated country, including UU, UMC Utrecht and Hubrecht.
+  deadlines: []
+  next_round: "The 2027 call closed on 14 October 2026. The 2028 call is expected to close around October 2027."
+  last_verified: 2026-11-04
+
+- id: erc-proof-of-concept
+  title: ERC Proof of Concept Grant
+  funder: European Research Council
+  url: https://erc.europa.eu/apply-grant/proof-concept
+  summary: >-
+    Lump sum for ERC grantees to explore the commercial or societal potential of results
+    from their ERC project. Grantees may also join the EIC Tech to Market programme.
+  amount: "€150,000 lump sum for 18 months"
+  areas: [any]
+  stages: [valorisation]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: [erc-grant]
+    utrecht: Only for PIs with an ongoing or recently ended ERC frontier grant. Utrecht Holdings can support the valorisation plan and letters of intent.
+  deadlines: []
+  next_round: "2027 cut-offs not yet published. The 2026 call had two cut-offs (17 March and 17 September 2026)."
+  last_verified: 2026-11-04
+
+# ============================================================ European Innovation Council
+
+- id: eic-pathfinder-open
+  title: EIC Pathfinder Open
+  funder: European Innovation Council
+  url: https://eic.ec.europa.eu/eic-funding-opportunities/eic-pathfinder_en
+  summary: >-
+    Collaborative research on the science behind breakthrough technologies (early TRL),
+    in any field.
+  areas: [any]
+  stages: [research]
+  flags: [deep-tech, international]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium, researcher]
+    requires: []
+    utrecht: Usually a consortium of at least three partners from three EU or associated countries; single applicants are possible in some cases. UU and UMC Utrecht can coordinate.
+  deadlines: []
+  next_round: "Pathfinder Open 2026 closed on 12 May 2026. The 2027 deadline follows from the EIC Work Programme 2027."
+  last_verified: 2026-11-04
+
+- id: eic-transition
+  title: EIC Transition
+  funder: European Innovation Council
+  url: https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en
+  summary: >-
+    Turns research results into innovations: technology maturation and business case
+    development, building on results from an EIC Pathfinder, ERC Proof of Concept or
+    eligible Horizon project.
+  areas: [any]
+  stages: [transition]
+  flags: [deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium, startup, sme]
+    requires: [research-result]
+    utrecht: Single applicants (SMEs, spin-offs, research organisations) or small consortia, building on results from an eligible EU-funded project.
+  deadlines: []
+  next_round: "The 2026 deadline was 16 September 2026. The 2027 call officially opens in spring 2027 (EIC Work Programme 2027)."
+  last_verified: 2026-11-04
+
+- id: eic-accelerator
+  title: EIC Accelerator
+  funder: European Innovation Council
+  url: https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en
+  summary: >-
+    Grant plus optional equity investment for start-ups and SMEs to develop and scale
+    breakthrough innovations. Three steps: short proposal, full proposal, jury interview.
+  areas: [any]
+  stages: [venture]
+  flags: [deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme, founder]
+    requires: [eu-company]
+    utrecht: Single SMEs (including start-ups and spin-offs) established in an EU or associated country; individuals planning to found a company can also apply.
+  deadlines: []
+  rolling: true
+  rolling_note: Short proposals can be submitted at any time and are batched for evaluation every first Tuesday of the month at 17:00 Brussels time. Invited full proposals go to fixed batching dates.
+  last_verified: 2026-11-04
+
+- id: eic-women-techeu
+  title: Women TechEU
+  funder: European Innovation Council
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/48106227
+  summary: >-
+    €75,000 grant plus a business development programme for women-led early-stage deep
+    tech start-ups. Two strands: a continuous eligibility check, then full proposals at
+    fixed deadlines.
+  amount: "€75,000 grant"
+  areas: [any]
+  stages: [transition, venture]
+  flags: [women, deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [startup]
+    requires: [eu-company]
+    gender: women
+    utrecht: Women-led early-stage deep tech start-ups in the EU or associated countries. Pass the eligibility strand first (weekly validation, open until 13 July 2027).
+  deadlines:
+    - { date: 2027-01-14, time: "17:00", tz: Europe/Brussels, label: full proposal (after eligibility check) }
+    - { date: 2027-04-01, time: "17:00", tz: Europe/Brussels, label: full proposal (after eligibility check) }
+    - { date: 2027-07-08, time: "17:00", tz: Europe/Brussels, label: full proposal (after eligibility check) }
+  source_quote: "Submission deadline 6: 14/01/2027, 17:00h CET, Brussels time - Submission deadline 7: 01/04/2027, 17:00h CEST - Submission deadline 8: 08/07/2027, 17:00h CEST"
+  last_verified: 2026-11-04
+
+- id: eu-prize-women-innovators-2027
+  title: European Prize for Women Innovators 2027
+  funder: European Innovation Council & EIT
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PRIZE-WIP
+  summary: Prize for women who founded or co-founded an innovative company and are inspiring leaders.
+  areas: [any]
+  stages: [venture]
+  flags: [women]
+  funding_type: prize
+  eligibility:
+    applicants: [founder, startup]
+    requires: []
+    gender: women
+    utrecht: Women applying as a natural person, legally residing in an EU Member State or associated country.
+  deadlines:
+    - { date: 2026-12-01, time: "17:00", tz: Europe/Brussels }
+  source_quote: "Deadline for submission: 01 December 2026 – 17:00 CET (Brussels)"
+  last_verified: 2026-11-04
+
+- id: eu-prize-rising-innovators-2027
+  title: European Prize for Women Innovators 2027 — Rising Innovators (under 35)
+  funder: European Innovation Council & EIT
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-EIC-2026-PRIZE-WIP-RisingInnovators
+  summary: The young-innovator category of the European Prize for Women Innovators.
+  areas: [any]
+  stages: [venture]
+  flags: [women, young-innovators]
+  funding_type: prize
+  eligibility:
+    applicants: [founder, startup]
+    requires: []
+    gender: women
+    max_age: 34
+    utrecht: Women under 35 at the start of the call year, legally residing in an EU Member State or associated country.
+  deadlines:
+    - { date: 2026-12-01, time: "17:00", tz: Europe/Brussels }
+  source_quote: "Applicants to the Rising Innovators category must be aged under 35 at the start of the call year … Deadline for submission: 01 December 2026 – 17:00 CET (Brussels)"
+  last_verified: 2026-11-04
+
+# ============================================================ Marie Skłodowska-Curie Actions
+
+- id: msca-postdoctoral-fellowships-2027
+  title: MSCA Postdoctoral Fellowships 2027
+  funder: European Commission (MSCA)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2027-PF-01-01
+  summary: >-
+    Fellowships for postdocs to move to a host abroad (European or global). Utrecht
+    groups can host incoming fellows.
+  areas: [any]
+  stages: [research]
+  flags: [early-career, international]
+  funding_type: fellowship
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Postdocs hosted by UU, UMC Utrecht or Hubrecht (incoming) or moving abroad (outgoing). Mobility rules apply; see the call.
+  deadlines:
+    - { date: 2027-09-08, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-MSCA-2027-PF-01-01 — Forthcoming; planned opening 7 April 2027; deadline 8 September 2027"
+  last_verified: 2026-11-04
+
+- id: msca-staff-exchanges-2027
+  title: MSCA Staff Exchanges 2027
+  funder: European Commission (MSCA)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2027-SE-01-01
+  summary: International and intersectoral staff exchanges between academic and non-academic organisations.
+  areas: [any]
+  stages: [research]
+  flags: [international, public-private]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium]
+    requires: []
+    utrecht: Consortia of universities, research institutes and companies; UU, UMC Utrecht, HU and Utrecht SMEs can participate.
+  deadlines:
+    - { date: 2027-04-13, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-MSCA-2027-SE-01-01 — Forthcoming; planned opening 15 December 2026; deadline 13 April 2027"
+  last_verified: 2026-11-04
+
+- id: msca-doctoral-networks-2027
+  title: MSCA Doctoral Networks 2027
+  funder: European Commission (MSCA)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MSCA-2027-DN-01-01
+  summary: Joint doctoral training programmes run by international networks of universities, research organisations and companies.
+  areas: [any]
+  stages: [research]
+  flags: [international, early-career]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium]
+    requires: []
+    utrecht: International consortia; UU, UMC Utrecht and Hubrecht can coordinate or join.
+  deadlines:
+    - { date: 2027-11-23, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-MSCA-2027-DN-01-01 — Forthcoming; planned opening 26 May 2027; deadline 23 November 2027"
+  last_verified: 2026-11-04
+
+# ============================================================ Horizon Europe — Health cluster (open now)
+# All: Funding & Tenders Portal, 17:00:00 Brussels time. Collaborative calls need a consortium of
+# at least three independent entities from three different EU Member States / Associated Countries.
+
+- id: he-hlth-2027-amr-antimicrobials
+  title: "Horizon Europe: Innovative antimicrobials against resistant pathogens"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-08
+  summary: Research and Innovation Action to develop innovative antimicrobials against pathogens resistant to antimicrobials.
+  areas: [life-sciences, chemistry, biology, animal-health]
+  stages: [research, valorisation]
+  flags: [infectious-diseases, drug-development, one-health]
+  funding_type: grant
+  eligibility: &he-consortium
+    applicants: [consortium]
+    requires: []
+    utrecht: International consortium (at least three entities from three EU/associated countries). UU, UMC Utrecht, Hubrecht and Utrecht companies can coordinate or join — contact your Research Support Office or EU grants team early.
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-DISEASE-08 — Open (opened 29 October 2026); deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-antivirals
+  title: "Horizon Europe: Small-molecule antivirals for pathogens with epidemic potential"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-05
+  summary: Research and Innovation Action to develop novel small-molecule antiviral therapeutics for pathogens with epidemic potential.
+  areas: [life-sciences, chemistry, biology]
+  stages: [research, valorisation]
+  flags: [infectious-diseases, drug-development]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-DISEASE-05 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-mabs-flavivirus
+  title: "Horizon Europe: Monoclonal antibodies against flavivirus infections"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-06
+  summary: Research and Innovation Action to develop monoclonal antibodies to prevent and treat infections from flaviviruses.
+  areas: [life-sciences, biology]
+  stages: [research, valorisation]
+  flags: [infectious-diseases, drug-development]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-DISEASE-06 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-mabs-filo-nairo
+  title: "Horizon Europe: Monoclonal antibodies against filo-, nairo- and related viruses"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-DISEASE-07
+  summary: Research and Innovation Action to develop monoclonal antibodies to prevent and treat infections from filoviruses, nairoviruses and related families.
+  areas: [life-sciences, biology]
+  stages: [research, valorisation]
+  flags: [infectious-diseases, drug-development]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-DISEASE-07 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-cell-free-protein-synthesis
+  title: "Horizon Europe: Cell-free protein synthesis platforms for biologics"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-IND-01
+  summary: Research and Innovation Action on cell-free protein synthesis platforms for the discovery and/or production of biologics.
+  areas: [life-sciences, chemistry, biology]
+  stages: [research, valorisation]
+  flags: [drug-development, deep-tech]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-IND-01 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-adverse-drug-reactions
+  title: "Horizon Europe: Personalised approaches to reduce adverse drug reactions"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-CARE-02
+  summary: Research and Innovation Action on personalised approaches to reduce the risk of adverse drug reactions.
+  areas: [life-sciences, animal-health, ai-software]
+  stages: [research]
+  flags: [drug-development, digital-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-CARE-02 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-exposome-climate
+  title: "Horizon Europe: Climate-related exposures in the human exposome"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-01-ENVHLTH-02
+  summary: Research and Innovation Action integrating climate-related exposures into the human exposome and characterising their health effects.
+  areas: [life-sciences, sustainability]
+  stages: [research]
+  flags: [energy-climate, one-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-01-ENVHLTH-02 — Open; deadline 17 February 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-point-of-care-diagnostics
+  title: "Horizon Europe: Portable and versatile point-of-care diagnostics (two-stage)"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-IND-02-two-stage
+  summary: Innovation Action to develop portable, versatile point-of-care diagnostics. Two-stage call.
+  areas: [medtech, life-sciences, ai-software]
+  stages: [valorisation, venture]
+  flags: [biomarkers, digital-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels, label: stage 1 }
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels, label: stage 2, invite_only: true }
+  source_quote: "HORIZON-HLTH-2027-02-IND-02-two-stage — Open; deadlines 17 February 2027 and 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-predictive-biomarkers
+  title: "Horizon Europe: Predictive biomarkers of disease progression and treatment response (two-stage)"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-TOOL-01-two-stage
+  summary: Research and Innovation Action to develop predictive biomarkers of disease progression and treatment response. Two-stage call.
+  areas: [life-sciences, medtech, ai-software]
+  stages: [research]
+  flags: [biomarkers]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels, label: stage 1 }
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels, label: stage 2, invite_only: true }
+  source_quote: "HORIZON-HLTH-2027-02-TOOL-01-two-stage — Open; deadlines 17 February 2027 and 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-neurodegenerative-trials
+  title: "Horizon Europe: Clinical trials for neurodegenerative diseases (two-stage)"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-DISEASE-14-two-stage
+  summary: Research and Innovation Action for clinical trials of innovative interventions for neurodegenerative diseases. Two-stage call.
+  areas: [life-sciences, medtech]
+  stages: [research, valorisation]
+  flags: [neuro, clinical-trials]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels, label: stage 1 }
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels, label: stage 2, invite_only: true }
+  source_quote: "HORIZON-HLTH-2027-02-DISEASE-14-two-stage — Open; deadlines 17 February 2027 and 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-ncd-interventions
+  title: "Horizon Europe: Innovative healthcare interventions for non-communicable diseases (two-stage)"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-02-DISEASE-01-two-stage
+  summary: Research and Innovation Action on innovative healthcare interventions for non-communicable diseases. Two-stage call.
+  areas: [life-sciences, medtech]
+  stages: [research]
+  flags: [cardiovascular, clinical-trials]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-02-17, time: "17:00", tz: Europe/Brussels, label: stage 1 }
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels, label: stage 2, invite_only: true }
+  source_quote: "HORIZON-HLTH-2027-02-DISEASE-01-two-stage — Open; deadlines 17 February 2027 and 16 September 2027"
+  last_verified: 2026-11-04
+
+# ============================================================ Horizon Europe — forthcoming 2027 topics
+# Status "Forthcoming": dates and texts can still change until the call opens.
+
+- id: he-hlth-2027-bioprinting-regenerative
+  title: "Horizon Europe: Bio-printing of living cells for regenerative medicine"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-03-TOOL-02
+  summary: Research and Innovation Action advancing bio-printing of living cells for regenerative medicine. Forthcoming; opens 3 June 2027.
+  areas: [life-sciences, medtech, biology]
+  stages: [research, valorisation]
+  flags: [atmp, deep-tech]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-03-TOOL-02 — Forthcoming; planned opening 3 June 2027; deadline 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-virtual-human-twins
+  title: "Horizon Europe: Virtual Human Twins for clinical decision support"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-03-TOOL-04
+  summary: Research and Innovation Action on Virtual Human Twins for integrated clinical decision support in prevention and diagnosis. Forthcoming; opens 3 June 2027.
+  areas: [ai-software, medtech, life-sciences]
+  stages: [research]
+  flags: [digital-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-03-TOOL-04 — Forthcoming; planned opening 3 June 2027; deadline 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-hlth-2027-frontier-ai-health
+  title: "Horizon Europe: Next generation of frontier AI models for healthcare"
+  funder: European Commission (Horizon Europe, Cluster Health)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-HLTH-2027-03-TOOL-08
+  summary: Coordination and Support Action towards the next generation of frontier AI models for healthcare. Forthcoming; opens 3 June 2027.
+  areas: [ai-software, medtech]
+  stages: [research]
+  flags: [digital-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-HLTH-2027-03-TOOL-08 — Forthcoming; planned opening 3 June 2027; deadline 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-miss-cancer-2027-functional-genomics
+  title: "EU Cancer Mission: Functional genomics for novel cancer targets"
+  funder: European Commission (Horizon Europe, Mission on Cancer)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-02-CANCER-01
+  summary: Research and Innovation Action leveraging functional genomics to reveal novel targets for cancer treatment. Forthcoming; opens 10 February 2027.
+  areas: [life-sciences, biology]
+  stages: [research]
+  flags: [oncology, drug-development]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-MISS-2027-02-CANCER-01 — Forthcoming; planned opening 10 February 2027; deadline 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-miss-cancer-2027-first-in-human
+  title: "EU Cancer Mission: Phase 1 / first-in-human trials of biomarker-guided medicines"
+  funder: European Commission (Horizon Europe, Mission on Cancer)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-02-CANCER-03
+  summary: Research and Innovation Action for phase 1 trials, including first-in-human, testing biomarker-guided medicines. Forthcoming; opens 10 February 2027.
+  areas: [life-sciences, medtech]
+  stages: [valorisation]
+  flags: [oncology, clinical-trials, biomarkers, atmp]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-16, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-MISS-2027-02-CANCER-03 — Forthcoming; planned opening 10 February 2027; deadline 16 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-livestock-microbiome
+  title: "Horizon Europe: Microbiome for livestock sustainability and health (One Health)"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-02-FARM2FORK-03
+  summary: Research and Innovation Action on the microbiome for terrestrial livestock sustainability and health within a One Health approach. Forthcoming; opens 20 April 2027.
+  areas: [animal-health, biology, sustainability]
+  stages: [research]
+  flags: [one-health, food-agri]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-23, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-02-FARM2FORK-03 — Forthcoming; planned opening 20 April 2027; deadline 23 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-food-microbiome-commercialisation
+  title: "Horizon Europe: Commercialising food-system microbiome solutions"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-02-FARM2FORK-07
+  summary: Innovation Action towards commercialisation of food-system microbiome solutions. Forthcoming; opens 20 April 2027.
+  areas: [biology, sustainability, life-sciences]
+  stages: [valorisation, venture]
+  flags: [food-agri]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-23, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-02-FARM2FORK-07 — Forthcoming; planned opening 20 April 2027; deadline 23 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-biotech-ccu
+  title: "Horizon Europe: Biotechnology for carbon capture and utilisation"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-01-CIRCBIO-08
+  summary: Innovation Action applying biotechnology to carbon capture and utilisation. Forthcoming; opens 20 April 2027.
+  areas: [chemistry, biology, sustainability]
+  stages: [valorisation]
+  flags: [energy-climate, circular]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-22, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-01-CIRCBIO-08 — Forthcoming; planned opening 20 April 2027; deadline 22 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-plastics-recycling
+  title: "Horizon Europe: Novel recycling technologies for complex plastics"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-01-CIRCBIO-03
+  summary: Research and Innovation Action developing novel recycling technologies for complex plastic materials. Forthcoming; opens 20 April 2027.
+  areas: [chemistry, sustainability]
+  stages: [research]
+  flags: [circular]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-22, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-01-CIRCBIO-03 — Forthcoming; planned opening 20 April 2027; deadline 22 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-biocidal-substances
+  title: "Horizon Europe: Replacing hazardous substances in biocidal products"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-01-ZEROPOLLUTION-01
+  summary: Research and Innovation Action to replace hazardous substances in biocidal products. Forthcoming; opens 20 April 2027.
+  areas: [chemistry, sustainability, animal-health]
+  stages: [research]
+  flags: [one-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-22, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-01-ZEROPOLLUTION-01 — Forthcoming; planned opening 20 April 2027; deadline 22 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-cl6-2027-ecosystem-health
+  title: "Horizon Europe: Health of ecosystems and wild species, and impacts on human health"
+  funder: European Commission (Horizon Europe, Cluster 6)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL6-2027-01-BIODIV-07
+  summary: Research and Innovation Action on the health of ecosystems and wild species, with predictions and impacts on human health. Forthcoming; opens 20 April 2027.
+  areas: [biology, animal-health, sustainability]
+  stages: [research]
+  flags: [one-health]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-09-22, time: "17:00", tz: Europe/Brussels }
+  source_quote: "HORIZON-CL6-2027-01-BIODIV-07 — Forthcoming; planned opening 20 April 2027; deadline 22 September 2027"
+  last_verified: 2026-11-04
+
+- id: he-miss-soil-2027-biotech
+  title: "EU Soil Mission: Innovative biotechnologies to restore soil health (two-stage)"
+  funder: European Commission (Horizon Europe, Mission Soil)
+  url: https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-MISS-2027-05-SOIL-05-two-stage
+  summary: Innovation Action on biotechnologies that restore soil health and improve agricultural competitiveness. Forthcoming; opens 4 February 2027.
+  areas: [biology, sustainability, chemistry]
+  stages: [valorisation]
+  flags: [food-agri]
+  funding_type: grant
+  eligibility: *he-consortium
+  deadlines:
+    - { date: 2027-04-08, time: "17:00", tz: Europe/Brussels, label: stage 1 }
+    - { date: 2027-09-14, time: "17:00", tz: Europe/Brussels, label: stage 2, invite_only: true }
+  source_quote: "HORIZON-MISS-2027-05-SOIL-05-two-stage — Forthcoming; planned opening 4 February 2027; deadlines 8 April 2027 and 14 September 2027"
+  last_verified: 2026-11-04
+
+# ============================================================ Pitch competitions, incubators, global funders
+
+- id: hello-tomorrow-challenge-2027
+  title: Hello Tomorrow Global Challenge 2027
+  funder: Hello Tomorrow
+  url: https://hello-tomorrow.org/global-challenge/
+  summary: >-
+    Global deep tech start-up competition; finalists pitch at the Hello Tomorrow Summit,
+    2–3 June 2027 in Amsterdam.
+  areas: [any]
+  stages: [venture]
+  flags: [deep-tech]
+  funding_type: prize
+  eligibility:
+    applicants: [startup, founder]
+    requires: []
+    utrecht: Deep tech start-ups worldwide, including Utrecht spin-offs.
+  deadlines:
+    - { date: 2026-11-30, time: "23:59", tz: Europe/Amsterdam }
+  source_quote: "Deadline 30 Nov 2026 · 23:59 CET"
+  last_verified: 2026-11-04
+
+- id: esa-bic-noordwijk
+  title: ESA BIC Noordwijk — space incubation
+  funder: ESA / SBIC Noordwijk
+  url: https://sbicnoordwijk.nl/esa-bic
+  summary: >-
+    Incubation for start-ups using space technology or space data, including
+    applications in health, agriculture and climate.
+  amount: "Up to €60,000 zero-equity funding, plus technical and business support"
+  areas: [ai-software, sustainability, medtech]
+  stages: [transition, venture]
+  flags: [deep-tech]
+  funding_type: programme
+  eligibility:
+    applicants: [founder, startup]
+    requires: []
+    max_company_age_years: 5
+    utrecht: Netherlands-resident applicants, company not yet founded or younger than 5 years, with a clear space connection.
+  deadlines: []
+  next_round: "Permanent open call with two selection deadlines a year (spring and autumn). The autumn 2026 deadline (5 October 2026) has passed; the spring 2027 deadline is expected around March 2027."
+  last_verified: 2026-11-04
+
+- id: climatelaunchpad
+  title: ClimateLaunchpad
+  funder: EIT Climate-KIC / ClimateLaunchpad
+  url: https://climatelaunchpad.org/
+  summary: >-
+    Green business ideas competition with national bootcamps and finals, leading to a
+    Grand Final in Europe.
+  areas: [sustainability]
+  stages: [valorisation, venture]
+  flags: [energy-climate, circular]
+  funding_type: prize
+  eligibility:
+    applicants: [founder, student, researcher]
+    requires: []
+    utrecht: Early-stage teams with a green business idea, via the national programme.
+  deadlines: []
+  next_round: "In 2026 applications ran March–May, with finals in September. The 2027 cycle is expected to open around March 2027."
+  last_verified: 2026-11-04
+
+- id: grand-challenges-gates
+  title: Grand Challenges (Gates Foundation)
+  funder: Gates Foundation
+  url: https://gcgh.grandchallenges.org/challenges
+  summary: >-
+    A rolling series of themed calls on global health and development: diagnostics,
+    infectious disease, maternal and child health, AI and more.
+  areas: [life-sciences, medtech, ai-software, biology]
+  stages: [research, valorisation]
+  flags: [infectious-diseases, digital-health, international, social-impact]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, startup, sme]
+    requires: []
+    utrecht: Most challenges are open to organisations worldwide; check each call.
+  deadlines: []
+  rolling: true
+  rolling_note: New challenges open several times a year, each with its own short window.
+  last_verified: 2026-11-04

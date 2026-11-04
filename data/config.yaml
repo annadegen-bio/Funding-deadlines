@@ -1,0 +1,32 @@
+# Site-wide settings. Change these here; everything else is generated from them.
+
+# Where GitHub Pages serves the build. Subscription URLs are built from this, and every
+# subscriber's calendar stores it — changing it later breaks existing subscriptions.
+# If the repo moves to an organisation account or gets a custom domain
+# (e.g. funding.utrechtholdings.nl), update this BEFORE announcing the feeds.
+base_url: "https://annadegen-bio.github.io/funding-deadlines/"
+
+# Optional: URL of the Cloudflare Worker in worker/ (custom filters and custom reminders
+# in a subscription). Leave empty until it is deployed; the website then offers the
+# preset feeds plus a custom one-off download.
+worker_url: ""
+
+calendar_name: "Utrecht Funding & Deadlines"
+
+# Where the "Let us know" link on the website points (corrections, missing schemes).
+# Replace with a dedicated contact page or form when there is one.
+contact_url: "https://utrechtholdings.nl/"
+calendar_description: >-
+  Funding deadlines for Utrecht researchers and start-ups, from research grants to
+  pitch competitions. Curated by Utrecht Holdings. Always check the funder's page.
+
+# Default reminders, in days before the deadline date.
+default_reminders_days: [42, 7]
+
+# Rolling opportunities are not calendar events. Instead each feed gets one check-in
+# entry per quarter, listing the rolling schemes that match that feed.
+rolling_checkin_months: [1, 4, 7, 10]
+
+# How many days a `last_verified` date may age before validation warns.
+verify_warn_days: 60
+verify_fail_days: 120
