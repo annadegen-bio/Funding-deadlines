@@ -51,7 +51,7 @@ node scripts/eu-candidates.mjs > candidates/eu-topics.md   # EU topics not yet i
 
 ## Set-up checklist
 
-- [ ] **Enable GitHub Pages:** Settings → Pages → Source: *GitHub Actions*. The workflow in
+- [x] **Enable GitHub Pages:** Settings → Pages → Source: *GitHub Actions*. The workflow in
       `.github/workflows/pages.yml` then publishes on every push to the default branch and nightly.
 - [ ] **Decide the permanent address before announcing feeds.** Subscribers' calendars store the
       feed URL. If the repo moves to an organisation account or gets a custom domain (e.g.
@@ -59,7 +59,7 @@ node scripts/eu-candidates.mjs > candidates/eu-topics.md   # EU topics not yet i
       `wordpress/funding-block.html` first.
 - [ ] **WordPress:** create a *Funding* page and paste `wordpress/funding-block.html` into a
       Custom HTML block. Content updates need no further WordPress edits.
-- [ ] Set `contact_url` in `data/config.yaml` to a real contact page or form.
+- [x] Contact link: secretariaat@utrechtholdings.nl (`contact_url` in `data/config.yaml`).
 - [ ] Optional: deploy `worker/` and set `worker_url`.
 - [ ] Adjust `--uhf-accent` in `site/style.css` to the Utrecht Holdings brand colour.
 

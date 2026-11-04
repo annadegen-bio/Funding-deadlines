@@ -14,8 +14,8 @@ worker_url: ""
 calendar_name: "Utrecht Funding & Deadlines"
 
 # Where the "Let us know" link on the website points (corrections, missing schemes).
-# Replace with a dedicated contact page or form when there is one.
-contact_url: "https://utrechtholdings.nl/"
+# A web page or a mailto: link.
+contact_url: "mailto:secretariaat@utrechtholdings.nl?subject=Funding%20%26%20Deadlines"
 calendar_description: >-
   Funding deadlines for Utrecht researchers and start-ups, from research grants to
   pitch competitions. Curated by Utrecht Holdings. Always check the funder's page.

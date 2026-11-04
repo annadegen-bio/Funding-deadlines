@@ -123,7 +123,7 @@ function renderShell() {
 
   <div class="uhf-results" aria-live="polite"></div>
   <p class="uhf-foot">Curated by Utrecht Holdings. Missing something, or found a wrong date?
-    <a href="${h(DATA.config.contact_url)}" target="_blank" rel="noopener">Let us know</a>.
+    <a href="${h(DATA.config.contact_url)}"${DATA.config.contact_url.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"'}>Let us know</a>.
     Data updated ${h(fmtDate(DATA.today))}.</p>`;
 
   root.addEventListener('input', onInput);
