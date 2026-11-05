@@ -15,11 +15,13 @@ areas:
   any:             { label: "All disciplines", feed: false }
 
 # Stages of the route from research to venture. Ordered.
+# Colours are fills from the Utrecht Holdings wordmark, in the order they appear in it
+# (the same ramp the events calendar uses), so the route reads warm → cool.
 stages:
-  research:     { label: "Research grant",            hint: "Curiosity-driven or applied research, often with an impact angle" }
-  valorisation: { label: "Proof of concept",          hint: "Testing whether a result can become a product, service or licence" }
-  transition:   { label: "Transition & pre-seed",     hint: "Forming or financing a start-up: loans, pre-seed funds, transition grants" }
-  venture:      { label: "Venture & pitch",           hint: "Pitch competitions, accelerators, prizes and early investment for start-ups" }
+  research:     { color: "#FFC80C", label: "Research grant",            hint: "Curiosity-driven or applied research, often with an impact angle" }
+  valorisation: { color: "#96BC7B", label: "Proof of concept",          hint: "Testing whether a result can become a product, service or licence" }
+  transition:   { color: "#4FAE9E", label: "Transition & pre-seed",     hint: "Forming or financing a start-up: loans, pre-seed funds, transition grants" }
+  venture:      { color: "#10B7C9", label: "Venture & pitch",           hint: "Pitch competitions, accelerators, prizes and early investment for start-ups" }
 
 # Specific flags — finer filters on the website. Not used for feeds.
 flags:
