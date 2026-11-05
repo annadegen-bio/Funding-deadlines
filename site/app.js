@@ -81,14 +81,34 @@ function chips(name, entries, selected, withSwatch) {
   }).join('');
 }
 
+function contactLink() {
+  const url = DATA.config.contact_url;
+  const text = url.startsWith('mailto:') ? url.slice(7).split('?')[0] : url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  return `<a href="${h(url)}"${url.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"'}>${h(text)}</a>`;
+}
+
 function renderShell() {
   const t = DATA.taxonomy;
   const areas = Object.entries(t.areas).filter(([, v]) => v.feed !== false);
   const a = state.answers;
   root.innerHTML = `
+  <div class="uhf-welcome">
+    <h2 class="uhf-welcome-title">Welcome to the Utrecht Funding &amp; Deadlines overview</h2>
+    <p>Great science deserves the means to reach impact. This overview brings together research grants,
+      proof-of-concept funding, transition and pre-seed financing, and pitch competitions that help researchers,
+      founders and innovators move ideas from lab to life – from a first feasibility study to a spin-off's first investment.</p>
+    <p>Everything listed is open to Utrecht-based research groups or start-ups, wherever the money comes from. Each entry
+      links to the funder's own page, shows the deadline with date and time, and explains who can apply.
+      <strong>Always check the details on the funder's page before you apply.</strong></p>
+    <p>Filter by stage and area, check what fits you, and subscribe to your selection: your calendar stays up to date
+      and reminds you 6 weeks and 1 week before each deadline. Schemes without a fixed deadline are listed
+      under <em>Open year-round</em>.</p>
+    <p><strong>Know of funding we're missing?</strong> If you're aware of a grant, programme, competition or deadline
+      that should be here, let us know at ${contactLink()} – we'd love to include it.</p>
+  </div>
+
   <div class="uhf-controls-bar">
-    <p class="uhf-intro">Funding for Utrecht researchers and start-ups, from research grants to pitch competitions.
-      Every entry links to the funder's own page. <strong>Always check the deadline there.</strong></p>
+    <p class="uhf-updated">Updated ${h(fmtDate(DATA.today))}</p>
     <div class="uhf-view-toggle" role="group" aria-label="Level of detail">
       <button type="button" data-view="compact" class="${state.view === 'compact' ? 'on' : ''}">Overview</button>
       <button type="button" data-view="full" class="${state.view === 'full' ? 'on' : ''}">Full details</button>
@@ -160,15 +180,7 @@ function renderShell() {
     <div class="uhf-sub-body"></div>
   </section>
 
-  <div class="uhf-results" aria-live="polite"></div>
-
-  <div class="uhf-credit">
-    <span class="uhf-credit-label">Curated by</span>
-    <img src="${BASE}utrecht-holdings.svg" alt="Utrecht Holdings" width="83" height="28">
-    <span class="uhf-credit-text">Missing something, or a wrong date?
-      <a href="${h(DATA.config.contact_url)}"${DATA.config.contact_url.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"'}>Let us know</a>.
-      Updated ${h(fmtDate(DATA.today))}.</span>
-  </div>`;
+  <div class="uhf-results" aria-live="polite"></div>`;
 
   root.addEventListener('input', onInput);
   root.addEventListener('change', onInput);
