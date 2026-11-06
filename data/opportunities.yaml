@@ -1218,3 +1218,203 @@ opportunities:
   rolling: true
   rolling_note: New challenges open several times a year, each with its own short window.
   last_verified: 2026-11-04
+
+# ============================================================ Added 2026-11-06
+# Leads from the user (Ureka) and the Thematische Technologie Transfer funding tool
+# (tech-transfer.nl/en/fundingtool), each verified on the funder's own page.
+
+- id: umcu-ureka-mega-challenge
+  title: Ureka Mega Challenge (UMC Utrecht)
+  funder: UMC Utrecht
+  url: https://urekamegachallenge.umcutrecht.nl/nl/wie-kan-meedoen
+  summary: >-
+    UMC Utrecht's annual innovation competition for ideas and research results that improve care,
+    work processes or the patient's stay. Selected teams get coaching, workshops on IP, business
+    development and pitching, and a professionally filmed video pitch. Finalists receive €3,000 to
+    build a business case and compete for a €50,000 main prize in a live final show.
+  amount: "€3,000 per finalist; main prize €50,000 (half must be co-invested by a UMC Utrecht division or the team's own organisation)"
+  areas: [life-sciences, medtech, ai-software]
+  stages: [valorisation, venture]
+  flags: [digital-health, care-technology]
+  funding_type: prize
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: >-
+      Care professionals and researchers of UMC Utrecht; staff of direct partners such as Utrecht
+      University, De Hoogstraat or Princess Máxima Center if at least one team member is from UMC Utrecht.
+      Meant for early-stage ideas, not companies already in start-up phase. Pitches are in Dutch.
+  deadlines: []
+  next_round: "Annual. The 12th edition's final show was on 16 October 2026; recruitment for the next edition will be announced on the website."
+  last_verified: 2026-11-06
+
+- id: biotech-booster-level-1-2027
+  title: Biotech Booster 2027 — Level 1
+  funder: Biotech Booster (DUS-I, Ministry of Economic Affairs)
+  url: https://www.biotechbooster.nl/2027round/
+  summary: >-
+    Funding and expert guidance for biotech ideas that could work on scientific grounds but whose
+    practical operation and commercial feasibility still have to be demonstrated. Pre-applications
+    are selected for the rest of the procedure (December 2026 – April 2027).
+  amount: "Up to €200,000 per Level 1 project"
+  areas: [life-sciences, biology, chemistry, animal-health, sustainability]
+  stages: [valorisation]
+  flags: [deep-tech, food-agri]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Researchers at Dutch knowledge institutions, including universities of applied sciences such as HU. Level 2 (up to €1.9 million) is closed for this round.
+  deadlines:
+    - { date: 2026-11-24, time: "14:00", tz: Europe/Amsterdam, label: pre-application }
+  source_quote: "Level 1: pre-applications will open from November 10 until November 24, 2026 … Deadline: November 24, 2026 at 14:00 CET"
+  last_verified: 2026-11-06
+
+- id: nwo-perspectief-2026-2027
+  title: NWO Perspectief 2026–2027
+  funder: NWO (Applied and Engineering Sciences)
+  url: https://www.nwo.nl/en/calls/perspectief-round-2026-2027
+  summary: >-
+    Large, programme-style research consortia in which scientists, companies and societal
+    organisations develop new technology with economic and societal impact, usually in four to
+    eight work packages.
+  areas: [any]
+  stages: [research]
+  flags: [public-private, deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium]
+    requires: [company-partner]
+    utrecht: At least three knowledge institutions and four users (companies or societal organisations) per consortium; users co-fund. UU, UMC Utrecht and HU can take part.
+  deadlines:
+    - { date: 2026-11-24, time: "14:00", tz: Europe/Amsterdam, label: pre-proposal }
+    - { date: 2027-05-25, time: "14:00", tz: Europe/Amsterdam, label: full proposal, invite_only: true }
+  source_quote: "Pre-proposal: Tuesday 24th November 2026, 14.00:00 CET … Tuesday May 25th, 2027 - 14:00:00 CEST"
+  last_verified: 2026-11-06
+
+- id: nwo-demonstrator
+  title: NWO Demonstrator
+  funder: NWO
+  url: https://www.nwo.nl/en/researchprogrammes/demonstrator
+  summary: >-
+    Lets researchers turn knowledge from their research into a demonstration model or minimal
+    viable product (from TRL/SRL 4 to 5), so companies and other parties can see what it does before
+    they invest.
+  amount: "Up to €200,000 for at most 18 months (2026 round)"
+  areas: [any]
+  stages: [valorisation]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: [research-result]
+    utrecht: Researchers at Dutch knowledge institutions, including UU and UMC Utrecht.
+  deadlines: []
+  next_round: "The 2026 round opened in January and closed on 19 March 2026 (14:00). A 2027 round is expected on a similar schedule."
+  last_verified: 2026-11-06
+
+- id: faculty-of-impact
+  title: Faculty of Impact fellowship
+  funder: Faculty of Impact
+  url: https://facultyofimpact.nl/
+  summary: >-
+    Two-year fellowship for researchers of Dutch research institutes who want to turn breakthrough
+    research into a business with societal impact: training, mentors and a community, alongside
+    your salary.
+  areas: [any]
+  stages: [valorisation, transition]
+  flags: [deep-tech]
+  funding_type: programme
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: Researchers working at a Dutch research institute, with support from their institute.
+  deadlines: []
+  next_round: "The next call opens in January 2027."
+  last_verified: 2026-11-06
+
+- id: mibiton
+  title: Mibiton — financing for life sciences equipment
+  funder: Mibiton
+  url: https://www.mibiton.nl/
+  summary: >-
+    Finances equipment and facilities at innovative Dutch life sciences companies. Each application
+    round starts with an intake about a month before the application deadline; at most three
+    applications are handled per meeting.
+  amount: "Indicatively up to €600,000–€700,000 per application"
+  areas: [life-sciences, biology, chemistry, medtech]
+  stages: [transition, venture]
+  flags: []
+  funding_type: loan
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Innovative life sciences companies in the Netherlands, including Utrecht start-ups.
+  deadlines:
+    - { date: 2027-03-19, label: application (intake 19 Feb 2027) }
+    - { date: 2027-06-18, label: application (intake 21 May 2027) }
+    - { date: 2027-09-17, label: application (intake 20 Aug 2027) }
+    - { date: 2027-11-26, label: application (intake 29 Oct 2027) }
+  source_quote: "Intake 19 februari 2027 | Aanvraag 19 maart 2027; Intake 21 mei 2027 | Aanvraag 18 juni 2027; Intake 20 augustus 2027 | Aanvraag 17 september 2027; Intake 29 oktober 2027 | Aanvraag 26 november 2027 (the 4 December 2026 round is full; new requests go on a reserve list)"
+  last_verified: 2026-11-06
+
+- id: rvo-mit-rd-samenwerking
+  title: MIT R&D collaboration projects (MIT R&D-Samenwerkingsprojecten)
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/mit/rd-samenwerkingsprojecten
+  summary: >-
+    Subsidy for SMEs that develop or renew products, processes or services together with other
+    SMEs. Part of the MIT scheme; there is also a separate track for AI projects.
+  areas: [any]
+  stages: [valorisation, venture]
+  flags: [public-private]
+  funding_type: grant
+  eligibility:
+    applicants: [sme, startup]
+    requires: [nl-company]
+    utrecht: Collaborations of at least two Dutch SMEs; Utrecht start-ups can apply. MIT feasibility projects are handled regionally (for Utrecht via the province).
+  deadlines: []
+  next_round: "The 2026 window ran from 9 June to 15 September 2026. A 2027 window is expected around the same time."
+  last_verified: 2026-11-06
+
+- id: hh-innovatiemakelaars
+  title: Health~Holland innovation brokers (innovatiemakelaars)
+  funder: Health~Holland
+  url: https://www.health-holland.com/innovatiemakelaars
+  summary: >-
+    Start-ups and SMEs in life sciences & health get help from a selected innovation broker with
+    finding partners, financing and expertise for the next step to practice and market.
+    Health~Holland pays half of the broker's costs.
+  amount: "50% of the broker's costs, up to €5,000"
+  areas: [life-sciences, medtech]
+  stages: [transition, venture]
+  flags: [public-private]
+  funding_type: programme
+  eligibility:
+    applicants: [startup, sme]
+    requires: []
+    utrecht: Start-ups and SMEs in life sciences & health; only via innovation brokers selected by Health~Holland.
+  deadlines: []
+  rolling: true
+  rolling_note: Apply through one of the selected innovation brokers while they have budget.
+  last_verified: 2026-11-06
+
+- id: rvo-bmkb
+  title: SME credit guarantee (Borgstelling MKB-kredieten, BMKB)
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/bmkb
+  summary: >-
+    Government guarantee that lets a bank or other lender give credit to an entrepreneur with too
+    little collateral. You apply through your lender.
+  areas: [any]
+  stages: [transition, venture]
+  flags: []
+  funding_type: loan
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Dutch SMEs, including start-ups; ask your bank or lender about BMKB.
+  deadlines: []
+  rolling: true
+  rolling_note: Open all year; requested through the lender.
+  last_verified: 2026-11-06

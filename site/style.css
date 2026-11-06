@@ -152,6 +152,11 @@
 .uhf .uhf-card .uhf-actions { padding-top:8px; border-top:1px solid var(--line); }
 .uhf .uhf-checked { margin-left:auto; font-size:10.5px; color:var(--ink-faint); }
 
+/* ---------- suggest funding (deliberately at the bottom, after the full list) */
+.uhf .uhf-suggest { margin-top:28px; }
+.uhf .uhf-suggest .uhf-column-title { border-top-color:var(--teal); }
+.uhf .uhf-suggest p { font-size:13.5px; color:var(--ink-soft); margin:0 0 6px; max-width:820px; }
+
 .uhf .uhf-empty, .uhf .uhf-loading { font-size:13px; color:var(--ink-faint); padding:20px 0; text-align:center; }
 .uhf .uhf-error { font-size:13px; color:#A33; padding:20px 0; text-align:center; }
 
