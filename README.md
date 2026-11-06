@@ -36,6 +36,7 @@ data/config.yaml                                ├─ data/opportunities.json  
 
 ## Read before editing
 
+0. `docs/adding-funding.md`: how to add or suggest funding (three routes, copy-paste template).
 1. `rules/funding-rules.md`: what belongs, how to record a deadline, statuses.
 2. `data/taxonomy.yaml`: allowed areas, stages, topic flags, funding types.
 3. `data/opportunities.yaml`: the entries (field guide at the top).
@@ -63,11 +64,11 @@ node scripts/eu-candidates.mjs > candidates/eu-topics.md   # EU topics not yet i
 - [ ] Optional: deploy `worker/` and set `worker_url`.
 - [ ] Adjust `--uhf-accent` in `site/style.css` to the Utrecht Holdings brand colour.
 
-## Current content (4 November 2026)
+## Current content (6 November 2026)
 
-63 opportunities, all checked against the funder's page on 4 November 2026: 42 with open
-deadlines, 8 rolling, 12 expected (next date not yet published), 1 at invitation stage. Sources
-include Utrecht Holdings, UtrechtInc, ROM Utrecht Region, NWO, ZonMw, KWF, Hanarth Fonds,
-Hartstichting, Health~Holland, RVO, ERC, EIC, MSCA, Horizon Europe (health, cancer mission,
-bioeconomy), Hello Tomorrow, ESA BIC, ClimateLaunchpad, Gates Grand Challenges and the Michael J.
-Fox Foundation. `candidates/eu-topics.md` lists 187 further EU topics to review.
+72 opportunities, each checked against the funder's own page (63 on 4 November, 9 added on
+6 November, including leads from the TTT funding tool and the UMC Utrecht Ureka Mega Challenge).
+Sources include Utrecht Holdings, UtrechtInc, UMC Utrecht, ROM Utrecht Region, NWO, ZonMw, KWF,
+Hanarth Fonds, Hartstichting, Health~Holland, Biotech Booster, Faculty of Impact, Mibiton, RVO,
+ERC, EIC, MSCA, Horizon Europe, Hello Tomorrow, ESA BIC, ClimateLaunchpad, Gates Grand Challenges
+and the Michael J. Fox Foundation. `candidates/eu-topics.md` lists further EU topics to review.

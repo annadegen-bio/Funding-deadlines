@@ -1,0 +1,58 @@
+name: Suggest a funding opportunity
+description: A grant, programme, competition or deadline that Utrecht researchers or start-ups can apply for.
+title: "Funding suggestion: "
+labels: ["funding suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Every suggestion is checked on the funder's own page before it is added.
+        Please search the [overview](https://annadegen-bio.github.io/Funding-deadlines/) first, so we don't get duplicates.
+  - type: input
+    id: name
+    attributes:
+      label: Name of the funding
+      placeholder: e.g. Ureka Mega Challenge
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Link to the official page
+      description: The funder's or organiser's own page, not a news article or aggregator.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: funder
+    attributes:
+      label: Funder / organiser
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline (if known)
+      description: Date and time if the page gives them, or "rolling" / "next round expected …".
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      multiple: true
+      options:
+        - Research grant
+        - Proof of concept
+        - Transition & pre-seed
+        - Venture & pitch
+        - Not sure
+  - type: textarea
+    id: who
+    attributes:
+      label: Who can apply?
+      description: E.g. UMC Utrecht researchers, Dutch start-ups under 5 years, women founders under 35.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it relevant for Utrecht?
+  - type: input
+    id: contact
+    attributes:
+      label: Your name and organisation (optional)

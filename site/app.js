@@ -87,6 +87,21 @@ function contactLink() {
   return `<a href="${h(url)}"${url.startsWith('mailto:') ? '' : ' target="_blank" rel="noopener"'}>${h(text)}</a>`;
 }
 
+function suggestMailto() {
+  const to = DATA.config.contact_url.startsWith('mailto:') ? DATA.config.contact_url.slice(7).split('?')[0] : '';
+  const body = [
+    'Name of the funding:',
+    'Funder / organiser:',
+    'Link to the official page:',
+    'Deadline (if known):',
+    'Who can apply:',
+    'Why it is relevant for Utrecht researchers or start-ups:',
+    '',
+    'Your name and organisation (optional):',
+  ].join('\n');
+  return `mailto:${to}?subject=${encodeURIComponent('Funding suggestion for the Utrecht Funding & Deadlines overview')}&body=${encodeURIComponent(body)}`;
+}
+
 function renderShell() {
   const t = DATA.taxonomy;
   const areas = Object.entries(t.areas).filter(([, v]) => v.feed !== false);
@@ -103,8 +118,6 @@ function renderShell() {
     <p>Filter by stage and area, check what fits you, and subscribe to your selection: your calendar stays up to date
       and reminds you 6 weeks and 1 week before each deadline. Schemes without a fixed deadline are listed
       under <em>Open year-round</em>.</p>
-    <p><strong>Know of funding we're missing?</strong> If you're aware of a grant, programme, competition or deadline
-      that should be here, let us know at ${contactLink()} – we'd love to include it.</p>
   </div>
 
   <div class="uhf-controls-bar">
@@ -180,7 +193,18 @@ function renderShell() {
     <div class="uhf-sub-body"></div>
   </section>
 
-  <div class="uhf-results" aria-live="polite"></div>`;
+  <div class="uhf-results" aria-live="polite"></div>
+
+  <section class="uhf-suggest" aria-labelledby="uhfSuggest">
+    <h3 class="uhf-column-title" id="uhfSuggest">Suggest funding</h3>
+    <p>Looked through the list and still missing a grant, programme, competition or deadline that Utrecht researchers or
+      start-ups can apply for? Let us know – we check every suggestion on the funder's own page before adding it.</p>
+    <div class="uhf-actions uhf-actions-lg">
+      <a class="uhf-action primary" href="${h(suggestMailto())}">Email a suggestion</a>
+      ${DATA.config.suggest_form_url ? `<a class="uhf-action" href="${h(DATA.config.suggest_form_url)}" target="_blank" rel="noopener">Use the suggestion form (GitHub account)</a>` : ''}
+    </div>
+    <p class="uhf-hint">The email opens with a short template: the name, a link to the official page and the deadline are enough. Or write to ${contactLink()}.</p>
+  </section>`;
 
   root.addEventListener('input', onInput);
   root.addEventListener('change', onInput);

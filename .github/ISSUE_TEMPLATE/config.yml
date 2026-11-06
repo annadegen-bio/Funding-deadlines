@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Email a suggestion instead
+    url: mailto:secretariaat@utrechtholdings.nl?subject=Funding%20suggestion
+    about: No GitHub account? Send the name, link and deadline to the Utrecht Holdings secretariat.
