@@ -1418,3 +1418,57 @@ opportunities:
   rolling: true
   rolling_note: Open all year; requested through the lender.
   last_verified: 2026-11-06
+
+- id: ttt-pillar-1-tickets
+  title: Thematic Technology Transfer (TTT) — Pillar 1 tickets and vouchers
+  funder: Thematische Technologie Transfer (TTT), supported by RVO
+  url: https://tech-transfer.nl/en/themes/
+  summary: >-
+    For researchers who plan to spin off a company, in five themes: GreenTech, DeepTech, MedTech, AI
+    and infectious diseases (InFECT-TT). Tickets or vouchers pay for proof-of-concept and
+    business-development work (e.g. validation, patent position, market research, building a team),
+    together with workshops, events and access to the TTT network.
+  amount: "Up to €50,000 per ticket (TTT funding tool); InFECT-TT vouchers up to €25,000"
+  areas: [ai-software, medtech, sustainability, life-sciences, chemistry, biology]
+  stages: [valorisation]
+  flags: [deep-tech, infectious-diseases, energy-climate, circular, digital-health]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, founder]
+    requires: []
+    utrecht: >-
+      Researchers at TTT partner institutes, including Utrecht University, who have not yet registered
+      a company (InFECT-TT states this explicitly). Apply through the knowledge transfer office of your
+      institution: for UU and UMC Utrecht that is Utrecht Holdings. Questions? Utrecht Holdings can put
+      you in touch with the right TTT theme (secretariaat@utrechtholdings.nl). InFECT-TT covers
+      therapeutics and prevention for infectious diseases; diagnostics are out of scope.
+  deadlines: []
+  rolling: true
+  rolling_note: No fixed rounds published. Apply through your knowledge transfer office (for UU and UMC Utrecht, Utrecht Holdings).
+  last_verified: 2026-11-06
+
+- id: ttt-pillar-2-loans
+  title: Thematic Technology Transfer (TTT) — Pillar 2 convertible loans for young spin-offs
+  funder: Thematische Technologie Transfer (TTT) with thematic VC funds
+  url: https://tech-transfer.nl/en/themes/
+  summary: >-
+    Initial financing for recently founded spin-offs in the five TTT themes, usually a convertible
+    loan to become investor-ready, with hands-on support from professional VC funds. Examples: MedTech
+    via the Magnolia MedTech Fund (Thuja Capital), GreenTech via SHIFT Invest, infectious diseases via
+    the Infectious Disease Innovation Fund (LEH).
+  amount: "Up to €250,000 (TTT funding tool)"
+  areas: [ai-software, medtech, sustainability, life-sciences, chemistry, biology]
+  stages: [transition]
+  flags: [deep-tech, infectious-diseases, energy-climate, circular, digital-health]
+  funding_type: loan
+  eligibility:
+    applicants: [startup]
+    requires: []
+    utrecht: >-
+      Recently founded spin-offs from TTT partner institutes, including Utrecht University spin-offs.
+      Start with your knowledge transfer office: for UU and UMC Utrecht, Utrecht Holdings can put you in
+      touch with the right TTT theme and fund (secretariaat@utrechtholdings.nl).
+  deadlines: []
+  rolling: true
+  rolling_note: No fixed rounds published. Contact the theme's fund through your knowledge transfer office.
+  last_verified: 2026-11-06
