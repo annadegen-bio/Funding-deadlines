@@ -1372,7 +1372,7 @@ opportunities:
   eligibility:
     applicants: [sme, startup]
     requires: [nl-company]
-    utrecht: Collaborations of at least two Dutch SMEs; Utrecht start-ups can apply. MIT feasibility projects are handled regionally (for Utrecht via the province).
+    utrecht: Collaborations of at least two Dutch SMEs; Utrecht start-ups can apply. MIT feasibility projects are handled regionally; for Utrecht, see the separate entry "MIT feasibility projects — Province of Utrecht".
   deadlines: []
   next_round: "The 2026 window ran from 9 June to 15 September 2026. A 2027 window is expected around the same time."
   last_verified: 2026-11-06
@@ -1635,4 +1635,36 @@ opportunities:
   deadlines: []
   rolling: true
   rolling_note: Calls open at different moments through the year; RVO lists the current ones.
+  last_verified: 2026-11-11
+
+- id: provincie-utrecht-mit-haalbaarheid
+  title: MIT feasibility projects — Province of Utrecht (MIT Haalbaarheidsprojecten)
+  funder: Provincie Utrecht (advised by ROM Utrecht Region)
+  url: https://www.provincie-utrecht.nl/loket/subsidies/economie-en-innovatie-mit-haalbaarheidsprojecten
+  summary: >-
+    Subsidy for a feasibility project that comes before a technically or financially risky R&D project
+    leading to an innovative product, production process or service. At least 60% of the project is a
+    feasibility study (literature and patent search, inventory of technology and potential partners,
+    market exploration, competition analysis); the rest can be industrial research or experimental
+    development. Projects last at most one year and must start within four months of the grant.
+  amount: "35% of eligible costs, up to €20,000"
+  areas: [any]
+  stages: [valorisation, transition]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: >-
+      SMEs established in the province of Utrecht (with a visiting address there in the Chamber of
+      Commerce register). The project must contribute to both the Regional Economic Agenda (REA) of the
+      Utrecht region and the national knowledge and innovation agendas (KIAs). Since 2026 only one
+      application per company per calendar year (partner and linked companies count as one). The
+      province's budget template is mandatory; internal staff costs count at most €60 per hour.
+      ROM Utrecht Region advises on the content; decision within 26 weeks.
+  deadlines: []
+  next_round: >-
+    Yearly. The 2026 round opened on 7 April 2026, and the budget is usually used up on the first
+    day (a notary draws lots for the order that day), so apply on the opening day. The 2027 opening
+    date is not yet published; expected around April 2027.
   last_verified: 2026-11-11
