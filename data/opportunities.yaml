@@ -1472,3 +1472,167 @@ opportunities:
   rolling: true
   rolling_note: No fixed rounds published. Contact the theme's fund through your knowledge transfer office.
   last_verified: 2026-11-06
+
+# ============================================================ Added 2026-11-11
+# Leads from fondswervingonline.nl (innovation & technology) and the FFUND 2026 funding
+# landscape overview, each verified on the funder's own page.
+
+- id: eppermed-jtc2027-cell-gene-therapy
+  title: "EP PerMed JTC2027: Cell and Gene Therapy for Personalised Medicine (CGT4PM2027)"
+  funder: European Partnership for Personalised Medicine (EP PerMed); ZonMw for Dutch partners
+  url: https://www.eppermed.eu/funding-projects/calls/jtc2027/
+  summary: >-
+    Joint transnational call for multinational research projects that develop and validate innovative
+    cell and gene therapies for personalised medicine. Two stages; about €38 million in total across
+    24 participating countries. Information day on 3 December 2026.
+  amount: "About €38 million in total; Dutch partners are funded by ZonMw (see the national annex for the maximum per partner)"
+  areas: [life-sciences, biology, medtech]
+  stages: [research, valorisation]
+  flags: [atmp, drug-development, rare-diseases, international]
+  funding_type: grant
+  eligibility:
+    applicants: [consortium, researcher]
+    requires: []
+    utrecht: >-
+      Transnational consortia with partners from several participating countries; Dutch partners
+      (e.g. UMC Utrecht, UU, Hubrecht, Princess Máxima Center) apply for national funding through ZonMw
+      and must meet ZonMw's national rules.
+  deadlines:
+    - { date: 2027-01-20, time: "14:00", tz: Europe/Brussels, label: pre-proposal }
+    - { date: 2027-05-25, time: "14:00", tz: Europe/Brussels, label: full proposal, invite_only: true }
+  source_quote: "20 January 2027 (14:00, CET) Deadline for pre-proposal submission … 25 May 2027 (14:00, CEST) Deadline for full proposal submission"
+  last_verified: 2026-11-11
+
+- id: zonmw-dementia-innovative-therapies-trl4-6
+  title: "ZonMw: Promising innovative therapies against dementia (TRL 4–6)"
+  funder: ZonMw
+  url: https://www.zonmw.nl/nl/subsidie/werkpakket-4-veelbelovende-innovatieve-therapieen-ontwikkelfase-trl-4-6
+  summary: >-
+    Funding to move a therapy that slows or stops the neurodegenerative processes behind dementia at
+    least one development phase further (TRL 4, 5 or 6). Therapies include drugs, technologies and
+    digital interventions, and neuromodulation.
+  amount: "Up to €1,000,000 per project (total budget about €3 million)"
+  areas: [life-sciences, medtech, ai-software, chemistry]
+  stages: [valorisation]
+  flags: [neuro, drug-development, digital-health]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium, startup, sme]
+    requires: []
+    utrecht: Dutch research organisations and companies with a legal entity in the Netherlands, including UMC Utrecht, UU and Utrecht start-ups.
+  deadlines:
+    - { date: 2026-12-01, time: "14:00", tz: Europe/Amsterdam }
+  source_quote: "Deadline: 1 december 2026, 14.00 uur"
+  last_verified: 2026-11-11
+
+- id: open-science-nl-fair-research-outputs
+  title: "Open Science NL: FAIR research outputs"
+  funder: Open Science NL (NWO)
+  url: https://www.openscience.nl/calls/fair-research-outputs
+  summary: >-
+    Small grants to make research data, software and tools findable, accessible, interoperable and
+    reusable (FAIR). Budget is split over four discipline categories; first come, first served.
+  amount: "Up to €50,000 per project"
+  areas: [any]
+  stages: [research]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [researcher]
+    requires: []
+    utrecht: >-
+      Researchers at Dutch knowledge institutions. Note: the budget for the Life Sciences & Health
+      category was used up on 8 October 2026; the other categories are still open.
+  deadlines:
+    - { date: 2027-02-23, time: "14:00", tz: Europe/Amsterdam, label: final closing date }
+  rolling: true
+  rolling_note: Apply any time until the closing date, as long as your category still has budget.
+  source_quote: "Indienen kan tot 23 februari 2027 om 14:00:00 CET, zolang het subsidieplafond nog niet is bereikt."
+  last_verified: 2026-11-11
+
+- id: nierstichting-pionier-plus
+  title: "Dutch Kidney Foundation PIONIER+: co-financing for kidney research"
+  funder: Nierstichting (Dutch Kidney Foundation)
+  url: https://nierstichting.nl/onderzoekers/grants-aanvragen/pionier
+  summary: >-
+    Co-financing for kidney research when another funder requires a (private) cash contribution, for
+    cross-disease consortia that include kidney research, or for clinical trials that also study the
+    effect on the kidneys.
+  amount: "30% of the required (private) cash contribution, up to €100,000"
+  areas: [life-sciences, medtech]
+  stages: [research, valorisation]
+  flags: [public-private, clinical-trials]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: []
+    utrecht: Kidney researchers (e.g. at UMC Utrecht) applying to another funder that requires co-financing. Contact the Nierstichting, mentioning "Aanvraag PIONIER+".
+  deadlines: []
+  rolling: true
+  rolling_note: Tailor-made; contact the Nierstichting when preparing an application elsewhere.
+  last_verified: 2026-11-11
+
+- id: erc-synergy-2027
+  title: ERC Synergy Grant 2027
+  funder: European Research Council
+  url: https://erc.europa.eu/apply-grant/synergy-grant
+  summary: >-
+    For a group of two to four principal investigators who jointly address an ambitious research
+    problem that none of them could tackle alone.
+  amount: "Up to €10 million for 6 years (plus up to €4 million for specific extra costs)"
+  areas: [any]
+  stages: [research]
+  flags: [international]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, consortium]
+    requires: []
+    utrecht: Groups of 2–4 PIs hosted in EU or associated countries; UU, UMC Utrecht and Hubrecht can host. Contact your Research Support Office for the internal review.
+  deadlines:
+    - { date: 2027-05-11, time: "17:00", tz: Europe/Brussels }
+  source_quote: "Synergy Grant 2027 Opening: 17 February 2027 Deadline: 11 May 2027"
+  last_verified: 2026-11-11
+
+- id: eic-advanced-innovation-challenges
+  title: EIC Advanced Innovation Challenges
+  funder: European Innovation Council
+  url: https://eic.ec.europa.eu/eic-funding-opportunities/advanced-innovation-challenges-pilot_en
+  summary: >-
+    Challenge-based funding for breakthrough solutions in set themes. Stage 1 (€300,000, up to nine
+    months) prepares and benchmarks solutions; the best go on to stage 2 (up to €2.5 million) to develop
+    and test them with users. The 2026 challenges were physical AI / AI-powered robotics and translating
+    new approach methodologies (NAMs) into practice.
+  amount: "€300,000 (stage 1); up to €2.5 million (stage 2)"
+  areas: [any]
+  stages: [valorisation, transition]
+  flags: [deep-tech, nam]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, startup, sme]
+    requires: []
+    utrecht: Single start-ups, SMEs or research organisations (including teams and individual PIs) in an EU Member State or associated country.
+  deadlines: []
+  next_round: "The 2026 stage 1 closed on 26 February 2026 (stage 2, by invitation, closes 15 June 2027). New challenges follow from the EIC Work Programme 2027, published 5 November 2026."
+  last_verified: 2026-11-11
+
+- id: eureka-network-globalstars
+  title: Eureka network projects, clusters and GlobalStars
+  funder: Eureka / RVO
+  url: https://www.rvo.nl/subsidies-financiering/eureka
+  summary: >-
+    Funding for international, market-oriented R&D projects. Besides Eurostars there are thematic
+    Eureka clusters (e.g. ITEA4 for software, Xecs for electronics, Eurogia for energy), bilateral
+    calls (recently cell and gene therapy with Switzerland, applied quantum, AI) and GlobalStars calls
+    with partners from innovative economies outside Europe.
+  areas: [any]
+  stages: [valorisation, venture]
+  flags: [international, public-private, atmp, quantum-photonics]
+  funding_type: grant
+  eligibility:
+    applicants: [sme, startup, consortium]
+    requires: [company-partner]
+    utrecht: Dutch companies and research organisations doing market-oriented R&D with foreign partners; companies usually lead. See the RVO page for which call is open.
+  deadlines: []
+  rolling: true
+  rolling_note: Calls open at different moments through the year; RVO lists the current ones.
+  last_verified: 2026-11-11
