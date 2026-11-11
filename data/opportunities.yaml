@@ -1668,3 +1668,92 @@ opportunities:
     day (a notary draws lots for the order that day), so apply on the opening day. The 2027 opening
     date is not yet published; expected around April 2027.
   last_verified: 2026-11-11
+
+# ============================================================ Added 2026-11-11 (RVO start-up support overview)
+
+- id: rvo-iic-qdnl-quantum
+  title: "Innovation Impact Challenge (formerly SBIR): Quantum (QDNL)"
+  funder: RVO / Quantum Delta NL
+  url: https://www.rvo.nl/subsidies-financiering/innovation-impact-challenge/qdnl
+  summary: >-
+    Innovation competition in which the government asks companies to develop quantum solutions for
+    societal challenges (e.g. energy, physical and digital infrastructure), in three categories:
+    quantum computing & simulation, quantum communication & networks, and quantum sensing. Phase 1 is a
+    paid feasibility study; the best ideas go on to phase 2 (prototype development). IP stays with
+    the company.
+  amount: "Phase 1 up to €200,000 per feasibility study; phase 2 up to €1,500,000 per project (incl. VAT)"
+  areas: [ai-software, sustainability]
+  stages: [valorisation, venture]
+  flags: [quantum-photonics, deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: []
+    utrecht: Entrepreneurs and companies with a quantum innovation, including Utrecht start-ups and spin-offs. Contracts are awarded on the submitted quotation.
+  deadlines:
+    - { date: 2027-01-25, label: phase 1 quotation }
+  source_quote: "maandag 9 november 2026 – maandag 25 januari 2027 … Maximale budget per haalbaarheidsonderzoek: €200.000. Fase 2: per CAT €1.500.000."
+  last_verified: 2026-11-11
+
+- id: rvo-iic-ix-future-of-work
+  title: "Innovation Impact Challenge (formerly SBIR): Immersive Experiences (IX) for the future of work"
+  funder: RVO / Ministry of Education, Culture and Science
+  url: https://www.rvo.nl/subsidies-financiering/innovation-impact-challenge/ix-voor-toekomst-van-werk
+  summary: >-
+    Innovation competition for entrepreneurs working with immersive experiences (XR, VR/AR and related)
+    to develop solutions for the changing world of work. An expression of interest comes first, then
+    a paid feasibility study (phase 1) and prototype development (phase 2).
+  amount: "Phase 1 up to €25,000 per feasibility study; phase 2 up to €200,000 per project (incl. VAT)"
+  areas: [ai-software]
+  stages: [valorisation, venture]
+  flags: [social-impact]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: []
+    utrecht: Creative and innovative entrepreneurs working with immersive experiences, including Utrecht start-ups.
+  deadlines:
+    - { date: 2026-11-30, time: "13:00", tz: Europe/Amsterdam, label: expression of interest }
+  source_quote: "U kunt uw Expression of interest indienen vanaf 2 november 2026 tot en met 30 november 2026 13.00 uur."
+  last_verified: 2026-11-11
+
+- id: rvo-support-international-business
+  title: Support International Business (SIB)
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/sib
+  summary: >-
+    Small subsidies for start-ups and SMEs taking their first steps in a specific foreign market:
+    experts, export training and coaching, trade missions and trade fairs.
+  amount: "Mostly 50% of costs, up to €1,000–€2,500 per activity"
+  areas: [any]
+  stages: [venture]
+  flags: [international]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Dutch start-ups and SMEs, including Utrecht spin-offs, preparing for a specific foreign market.
+  deadlines: []
+  next_round: "The 2026 budget is used up; new budget becomes available from January 2027."
+  last_verified: 2026-11-11
+
+- id: invest-nl-deep-tech-fund
+  title: Invest-NL Deep Tech Fund
+  funder: Invest-NL
+  url: https://www.invest-nl.nl/en/themes/deep-tech
+  summary: >-
+    The national financing institution invests in innovative Dutch deep tech companies, in the
+    technologies of the National Technology Strategy (e.g. semiconductors, photonics, quantum), to help
+    them grow to the European top.
+  areas: [ai-software, medtech, sustainability, chemistry]
+  stages: [venture]
+  flags: [deep-tech, quantum-photonics]
+  funding_type: equity
+  eligibility:
+    applicants: [startup]
+    requires: [nl-company]
+    utrecht: Dutch deep tech companies, usually past the earliest stage. Start with the financing check on the Invest-NL website.
+  deadlines: []
+  rolling: true
+  rolling_note: Investment requests are handled continuously.
+  last_verified: 2026-11-11
