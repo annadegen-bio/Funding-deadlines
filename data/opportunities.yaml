@@ -1372,7 +1372,7 @@ opportunities:
   eligibility:
     applicants: [sme, startup]
     requires: [nl-company]
-    utrecht: Collaborations of at least two Dutch SMEs; Utrecht start-ups can apply. MIT feasibility projects are handled regionally (for Utrecht via the province).
+    utrecht: Collaborations of at least two Dutch SMEs; Utrecht start-ups can apply. MIT feasibility projects are handled regionally; for Utrecht, see the separate entry "MIT feasibility projects — Province of Utrecht".
   deadlines: []
   next_round: "The 2026 window ran from 9 June to 15 September 2026. A 2027 window is expected around the same time."
   last_verified: 2026-11-06
@@ -1635,4 +1635,125 @@ opportunities:
   deadlines: []
   rolling: true
   rolling_note: Calls open at different moments through the year; RVO lists the current ones.
+  last_verified: 2026-11-11
+
+- id: provincie-utrecht-mit-haalbaarheid
+  title: MIT feasibility projects — Province of Utrecht (MIT Haalbaarheidsprojecten)
+  funder: Provincie Utrecht (advised by ROM Utrecht Region)
+  url: https://www.provincie-utrecht.nl/loket/subsidies/economie-en-innovatie-mit-haalbaarheidsprojecten
+  summary: >-
+    Subsidy for a feasibility project that comes before a technically or financially risky R&D project
+    leading to an innovative product, production process or service. At least 60% of the project is a
+    feasibility study (literature and patent search, inventory of technology and potential partners,
+    market exploration, competition analysis); the rest can be industrial research or experimental
+    development. Projects last at most one year and must start within four months of the grant.
+  amount: "35% of eligible costs, up to €20,000"
+  areas: [any]
+  stages: [valorisation, transition]
+  flags: []
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: >-
+      SMEs established in the province of Utrecht (with a visiting address there in the Chamber of
+      Commerce register). The project must contribute to both the Regional Economic Agenda (REA) of the
+      Utrecht region and the national knowledge and innovation agendas (KIAs). Since 2026 only one
+      application per company per calendar year (partner and linked companies count as one). The
+      province's budget template is mandatory; internal staff costs count at most €60 per hour.
+      ROM Utrecht Region advises on the content; decision within 26 weeks.
+  deadlines: []
+  next_round: >-
+    Yearly. The 2026 round opened on 7 April 2026, and the budget is usually used up on the first
+    day (a notary draws lots for the order that day), so apply on the opening day. The 2027 opening
+    date is not yet published; expected around April 2027.
+  last_verified: 2026-11-11
+
+# ============================================================ Added 2026-11-11 (RVO start-up support overview)
+
+- id: rvo-iic-qdnl-quantum
+  title: "Innovation Impact Challenge (formerly SBIR): Quantum (QDNL)"
+  funder: RVO / Quantum Delta NL
+  url: https://www.rvo.nl/subsidies-financiering/innovation-impact-challenge/qdnl
+  summary: >-
+    Innovation competition in which the government asks companies to develop quantum solutions for
+    societal challenges (e.g. energy, physical and digital infrastructure), in three categories:
+    quantum computing & simulation, quantum communication & networks, and quantum sensing. Phase 1 is a
+    paid feasibility study; the best ideas go on to phase 2 (prototype development). IP stays with
+    the company.
+  amount: "Phase 1 up to €200,000 per feasibility study; phase 2 up to €1,500,000 per project (incl. VAT)"
+  areas: [ai-software, sustainability]
+  stages: [valorisation, venture]
+  flags: [quantum-photonics, deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: []
+    utrecht: Entrepreneurs and companies with a quantum innovation, including Utrecht start-ups and spin-offs. Contracts are awarded on the submitted quotation.
+  deadlines:
+    - { date: 2027-01-25, label: phase 1 quotation }
+  source_quote: "maandag 9 november 2026 – maandag 25 januari 2027 … Maximale budget per haalbaarheidsonderzoek: €200.000. Fase 2: per CAT €1.500.000."
+  last_verified: 2026-11-11
+
+- id: rvo-iic-ix-future-of-work
+  title: "Innovation Impact Challenge (formerly SBIR): Immersive Experiences (IX) for the future of work"
+  funder: RVO / Ministry of Education, Culture and Science
+  url: https://www.rvo.nl/subsidies-financiering/innovation-impact-challenge/ix-voor-toekomst-van-werk
+  summary: >-
+    Innovation competition for entrepreneurs working with immersive experiences (XR, VR/AR and related)
+    to develop solutions for the changing world of work. An expression of interest comes first, then
+    a paid feasibility study (phase 1) and prototype development (phase 2).
+  amount: "Phase 1 up to €25,000 per feasibility study; phase 2 up to €200,000 per project (incl. VAT)"
+  areas: [ai-software]
+  stages: [valorisation, venture]
+  flags: [social-impact]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: []
+    utrecht: Creative and innovative entrepreneurs working with immersive experiences, including Utrecht start-ups.
+  deadlines:
+    - { date: 2026-11-30, time: "13:00", tz: Europe/Amsterdam, label: expression of interest }
+  source_quote: "U kunt uw Expression of interest indienen vanaf 2 november 2026 tot en met 30 november 2026 13.00 uur."
+  last_verified: 2026-11-11
+
+- id: rvo-support-international-business
+  title: Support International Business (SIB)
+  funder: RVO
+  url: https://www.rvo.nl/subsidies-financiering/sib
+  summary: >-
+    Small subsidies for start-ups and SMEs taking their first steps in a specific foreign market:
+    experts, export training and coaching, trade missions and trade fairs.
+  amount: "Mostly 50% of costs, up to €1,000–€2,500 per activity"
+  areas: [any]
+  stages: [venture]
+  flags: [international]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme]
+    requires: [nl-company]
+    utrecht: Dutch start-ups and SMEs, including Utrecht spin-offs, preparing for a specific foreign market.
+  deadlines: []
+  next_round: "The 2026 budget is used up; new budget becomes available from January 2027."
+  last_verified: 2026-11-11
+
+- id: invest-nl-deep-tech-fund
+  title: Invest-NL Deep Tech Fund
+  funder: Invest-NL
+  url: https://www.invest-nl.nl/en/themes/deep-tech
+  summary: >-
+    The national financing institution invests in innovative Dutch deep tech companies, in the
+    technologies of the National Technology Strategy (e.g. semiconductors, photonics, quantum), to help
+    them grow to the European top.
+  areas: [ai-software, medtech, sustainability, chemistry]
+  stages: [venture]
+  flags: [deep-tech, quantum-photonics]
+  funding_type: equity
+  eligibility:
+    applicants: [startup]
+    requires: [nl-company]
+    utrecht: Dutch deep tech companies, usually past the earliest stage. Start with the financing check on the Invest-NL website.
+  deadlines: []
+  rolling: true
+  rolling_note: Investment requests are handled continuously.
   last_verified: 2026-11-11

@@ -66,7 +66,7 @@ node scripts/eu-candidates.mjs > candidates/eu-topics.md   # EU topics not yet i
 
 ## Current content (6 November 2026)
 
-81 opportunities, each checked against the funder's own page (63 on 4 November, 11 added on
+86 opportunities, each checked against the funder's own page (63 on 4 November, 11 added on
 6 November, 7 on 11 November from fondswervingonline.nl and the FFUND overview, including the TTT vouchers and loans, other leads from the TTT funding tool, and the UMC
 Utrecht Ureka Mega Challenge).
 Sources include Utrecht Holdings, UtrechtInc, UMC Utrecht, ROM Utrecht Region, NWO, ZonMw, KWF,
