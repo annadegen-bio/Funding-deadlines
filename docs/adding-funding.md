@@ -10,11 +10,10 @@ ATMP start-ups"). Claude checks the page, writes the entry, and opens a pull req
 
 ## 2. Suggestions from colleagues and visitors
 
-- **On the website:** the *Suggest funding* section at the bottom of the overview opens an email
-  to secretariaat@utrechtholdings.nl with a short template.
-- **On GitHub:** *Issues → New issue → Suggest a funding opportunity* (needs a GitHub account).
-  Suggestions stay visible in the Issues list until they are handled; close each one with a link
-  to the pull request that added it, or a note on why it was left out.
+The *Suggest funding* section at the bottom of the overview opens an email to
+secretariaat@utrechtholdings.nl with a short template (name, link to the official page,
+deadline, who can apply, why it is relevant). The secretariat forwards suggestions to whoever
+maintains the overview, or pastes them into a Claude Code session (route 1).
 
 ## 3. Edit the data yourself on GitHub
 

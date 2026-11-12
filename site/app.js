@@ -201,7 +201,6 @@ function renderShell() {
       start-ups can apply for? Let us know – we check every suggestion on the funder's own page before adding it.</p>
     <div class="uhf-actions uhf-actions-lg">
       <a class="uhf-action primary" href="${h(suggestMailto())}">Email a suggestion</a>
-      ${DATA.config.suggest_form_url ? `<a class="uhf-action" href="${h(DATA.config.suggest_form_url)}" target="_blank" rel="noopener">Use the suggestion form (GitHub account)</a>` : ''}
     </div>
     <p class="uhf-hint">The email opens with a short template: the name, a link to the official page and the deadline are enough. Or write to ${contactLink()}.</p>
   </section>`;
