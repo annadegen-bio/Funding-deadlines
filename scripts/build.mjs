@@ -73,7 +73,7 @@ write('data/opportunities.json', JSON.stringify({
   generated: now.toISOString(),
   today,
   config: {
-    base_url: config.base_url, worker_url: config.worker_url, calendar_name: config.calendar_name, contact_url: config.contact_url, suggest_form_url: config.suggest_form_url,
+    base_url: config.base_url, worker_url: config.worker_url, calendar_name: config.calendar_name, contact_url: config.contact_url,
     default_reminders_days: config.default_reminders_days, rolling_checkin_months: config.rolling_checkin_months,
   },
   taxonomy,
