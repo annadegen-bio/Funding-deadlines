@@ -1837,3 +1837,32 @@ opportunities:
   deadlines: []
   next_round: "Challenges will be opened in 2027 through tender processes; dates not yet published."
   last_verified: 2026-11-16
+
+- id: sprind-challenges-funken
+  title: SPRIND Challenges and Funken (German Federal Agency for Breakthrough Innovation)
+  funder: SPRIND (Bundesagentur für Sprunginnovationen)
+  url: https://www.sprind.org/en/actions/challenges
+  summary: >-
+    Europe-wide innovation competitions: a challenge sets an ambitious goal, and the best teams are
+    funded and coached through several stages, usually 1–3 years. A "Funke" is a faster, shorter
+    format. Recent topics fit Utrecht strengths: AI-driven microbial consortia for biomanufacturing,
+    continuous hormone monitoring (biosensors for women's health), microgravity for drug development
+    and organ-on-chip (Orbital Bioworks), quantum sensing, health data for AI (Recoding Medicine),
+    recovering critical metals from waste, and next-generation AI and robotics. The only call open
+    right now is the AI-Native Chip Design Challenge with NADI, listed separately.
+  areas: [any]
+  stages: [research, valorisation, transition]
+  flags: [deep-tech, international]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, startup, sme, consortium, founder]
+    requires: []
+    utrecht: >-
+      Open to Dutch teams. Applicants must be headquartered in the EU, EFTA, the UK or Israel (individual
+      team members or partners may be elsewhere). Depending on the challenge, universities,
+      non-university research institutes, start-ups, established companies and incubators can apply;
+      some challenges require a spin-off (the chip challenge excludes pure research groups). The work
+      may not be funded in parallel by other public money. Check each challenge's FAQ.
+  deadlines: []
+  next_round: "New challenges and Funken are launched several times a year; currently only the AI-Native Chip Design Challenge is open (deadline 30 November 2026)."
+  last_verified: 2026-11-16
