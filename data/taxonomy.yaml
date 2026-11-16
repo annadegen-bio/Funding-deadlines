@@ -43,6 +43,7 @@ flags:
   circular:            { label: "Circular economy & materials" }
   quantum-photonics:   { label: "Quantum & photonics" }
   deep-tech:           { label: "Deep tech (general)" }
+  defence-dual-use:    { label: "Defence & dual-use" }
   social-impact:       { label: "Social impact" }
   women:               { label: "Women-led / women innovators" }
   young-innovators:    { label: "Young innovators (age limit)" }
