@@ -1757,3 +1757,83 @@ opportunities:
   rolling: true
   rolling_note: Investment requests are handled continuously.
   last_verified: 2026-11-11
+
+# ============================================================ Added 2026-11-16
+# New national innovation agencies (NADI, NIDT). Defence/dual-use entries carry the
+# defence-dual-use flag so teams can find (or filter out) them; they can also inspire
+# alternative applications of inventions.
+
+- id: nadi-sprind-ai-native-chip-design
+  title: "NADI × SPRIND: AI-Native Chip Design Challenge"
+  funder: NADI (National Agency for Disruptive Innovation, in formation) and SPRIND (Germany)
+  url: https://www.sprind.org/en/actions/challenges/ai-native-chip-design
+  summary: >-
+    The first challenge of NADI, the new Dutch agency for disruptive innovation (modelled on DARPA,
+    SPRIND and ARIA). Teams design faster, more energy-efficient chip architectures that can be made
+    in Europe, using AI to speed up the design process. 20 months in two stages, with fixed-price
+    contracts, a jury of experts, and support towards follow-on financing. CMOS first; photonic,
+    neuromorphic, memristive and analogue computing, in-memory computing, heterogeneous integration
+    and 3D stacking are also welcome (not quantum or organoid computing). Webinar on 17 November 2026.
+  amount: "Up to €9.6 million per team (stage 1, 8 months: up to €2.6 million)"
+  areas: [ai-software]
+  stages: [transition, venture]
+  flags: [deep-tech, quantum-photonics]
+  funding_type: grant
+  eligibility:
+    applicants: [startup, sme, founder]
+    requires: []
+    utrecht: >-
+      Companies working on chip design, or consortia of up to three companies. Pure research groups
+      are excluded: a university team qualifies only if it has already spun out, or can show it will
+      found a company right at the start of the challenge.
+  deadlines:
+    - { date: 2026-11-30, time: "11:00", tz: Europe/Amsterdam }
+  source_quote: "The application period runs until November 30, 2026, at 11:00 (CET)."
+  last_verified: 2026-11-16
+
+- id: nadi-programmes
+  title: NADI — National Agency for Disruptive Innovation (future programmes)
+  funder: NADI (in formation, Ministry of Economic Affairs)
+  url: https://nadi.nl/nl/
+  summary: >-
+    New independent Dutch agency that funds breakthrough innovations still too risky for the market,
+    through programmes around major societal and strategic challenges (e.g. security, energy, health,
+    economy). €500 million is reserved in the national budget. The first programme is the AI-Native
+    Chip Design Challenge; more programmes are being designed.
+  areas: [any]
+  stages: [research, valorisation, transition]
+  flags: [deep-tech]
+  funding_type: grant
+  eligibility:
+    applicants: [researcher, startup, sme, consortium]
+    requires: []
+    utrecht: Researchers and companies; eligibility will be set per programme. Sign up for the NADI newsletter to hear about new programmes.
+  deadlines: []
+  next_round: "Further programmes are being worked out in the coming months; no dates published yet."
+  last_verified: 2026-11-16
+
+- id: nidt-defending-the-north-sea
+  title: "NIDT challenge: Defending the North Sea"
+  funder: NIDT (National Institute for Defense Technology)
+  url: https://nidt.nl/en/challenges/
+  summary: >-
+    The first challenge of the new National Institute for Defense Technology, which brings industry,
+    research institutions and the Ministry of Defence together to develop defence technology (from
+    TRL 4–6 up to TRL 9). A phased competition of about three years: registration, conceptual and basic
+    design, proof of critical components, prototyping in an operational setting and, if successful,
+    procurement by the Ministry of Defence. NIDT covers innovation costs and plans at least one new
+    challenge per year (budget €100 million in 2027, rising to €350 million in 2030).
+  areas: [any]
+  stages: [valorisation, transition, venture]
+  flags: [defence-dual-use, deep-tech]
+  funding_type: programme
+  eligibility:
+    applicants: [startup, sme, researcher, consortium]
+    requires: []
+    utrecht: >-
+      Any organisation can register, from established defence suppliers to start-ups and research
+      institutions. Interesting for Utrecht teams whose technology (sensing, data, communication,
+      autonomy, materials) may also have defence or dual-use applications.
+  deadlines: []
+  next_round: "Challenges will be opened in 2027 through tender processes; dates not yet published."
+  last_verified: 2026-11-16
